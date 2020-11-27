@@ -14,6 +14,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.covidapp.notasmartapp.Interfaces.MainContract;
 import com.covidapp.notasmartapp.Presenters.LoginPresenter;
 import com.covidapp.notasmartapp.R;
+import com.covidapp.notasmartapp.Views.Main.MainActivity;
 import com.google.firebase.auth.FirebaseUser;
 import com.thekhaeng.pushdownanim.PushDownAnim;
 

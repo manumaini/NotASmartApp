@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "887884806195",
+    "firebase_url": "https://notasmartapp.firebaseio.com",
+    "project_id": "notasmartapp",
+    "storage_bucket": "notasmartapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:887884806195:android:1fae9ccaad8b496c74cb46",
+        "android_client_info": {
+          "package_name": "com.covidapp.notasmartapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "887884806195-cr7uuu6jt8eiv2qaqqsgu9mkvclepe7d.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.covidapp.notasmartapp",
+            "certificate_hash": "55d351ee3583022d64be57bef726d106b5a3931e"
+          }
+        },
+        {
+          "client_id": "887884806195-ao72jaeiin074aevfe37rj2keuj9fa7i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBFz0MT0ZP8Ka7NQwwG6nQewRJ9NZPs_MM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "887884806195-ao72jaeiin074aevfe37rj2keuj9fa7i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

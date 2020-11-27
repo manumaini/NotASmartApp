@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Views.RegistrationActivity">
+
+    <TextView
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:textSize="36sp"
+        android:textColor="@color/colorDarkGrey"
+        android:text="SignUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <ImageView
+        android:layout_marginTop="80dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/ic_secure_login"
+        android:id="@+id/secureLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:layout_marginTop="36dp"
+        android:id="@+id/email_label"
+        android:layout_marginHorizontal="24dp"
+        android:layout_below="@id/secureLogin"
+        android:textSize="16sp"
+        android:textColor="@color/colorBlack"
+        android:text="Email:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:paddingHorizontal="16dp"
+        android:textColor="@color/colorBlack"
+        android:id="@+id/registration_email"
+        android:layout_marginTop="4dp"
+        android:layout_below="@id/email_label"
+        android:layout_marginHorizontal="16dp"
+        android:background="@drawable/textfield_backgrouond"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"/>
+
+    <TextView
+        android:layout_marginTop="16dp"
+        android:id="@+id/password_label"
+        android:layout_marginHorizontal="24dp"
+        android:layout_below="@id/registration_email"
+        android:textSize="16sp"
+        android:textColor="@color/colorBlack"
+        android:text="Password:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <EditText
+        android:inputType="textPassword"
+        android:paddingHorizontal="16dp"
+        android:textColor="@color/colorBlack"
+        android:id="@+id/registration_password"
+        android:layout_marginTop="4dp"
+        android:layout_below="@id/password_label"
+        android:layout_marginHorizontal="16dp"
+        android:background="@drawable/textfield_backgrouond"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"/>
+
+    <Button
+        android:textColor="@color/colorWhite"
+        android:text="SignUp"
+        android:layout_marginHorizontal="16dp"
+        android:id="@+id/loginButton"
+        android:layout_marginTop="54dp"
+        android:layout_below="@id/registration_password"
+        android:background="@drawable/button_background"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"/>
+
+</RelativeLayout>

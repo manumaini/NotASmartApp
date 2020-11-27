@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">NotASmartApp</string>
+    <string name="sign_up">Don\'t have an account ? <u>Sign Up</u></string>
 </resources>

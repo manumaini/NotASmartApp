@@ -1,6 +1,7 @@
 package com.covidapp.notasmartapp.Adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +13,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.covidapp.notasmartapp.POJO.Article;
 import com.covidapp.notasmartapp.R;
+import com.covidapp.notasmartapp.Views.WebActivity;
+import com.thekhaeng.pushdownanim.PushDownAnim;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,9 +22,11 @@ import java.util.List;
 public class HealthNewsAdapter extends RecyclerView.Adapter<HealthNewsAdapter.ViewHolder> {
 
     private List<Article> list;
+    private Context context;
 
-    public HealthNewsAdapter() {
+    public HealthNewsAdapter(Context context) {
         list = new ArrayList<>();
+        this.context = context;
     }
 
     @NonNull
@@ -39,9 +44,16 @@ public class HealthNewsAdapter extends RecyclerView.Adapter<HealthNewsAdapter.Vi
 
         Article article = list.get(position);
         holder.title.setText(article.getTitle());
-        holder.author.setText(article.getAuthor());
+        holder.author.setText("-"+article.getAuthor());
         holder.desc.setText(article.getDescription());
-
+        PushDownAnim.setPushDownAnimTo(holder.next).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(context, WebActivity.class);
+                intent.putExtra("url",article.getUrl());
+                context.startActivity(intent);
+            }
+        });
 
     }
 

@@ -27,6 +27,7 @@
         android:layout_height="wrap_content"/>
 
     <TextView
+        android:layout_marginTop="8dp"
         android:id="@+id/news_desc"
         android:gravity="center_horizontal"
         android:text="description description description description description description"

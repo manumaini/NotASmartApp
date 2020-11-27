@@ -42,7 +42,7 @@ public class HealthNewsFragment extends Fragment implements MainContract.HealthN
         loading = view.findViewById(R.id.loading_screen);
         presenter = new HealthNewsPresenter(context,this);
         recyclerView.setLayoutManager(new LinearLayoutManager(context));
-        adapter = new HealthNewsAdapter();
+        adapter = new HealthNewsAdapter(context);
         recyclerView.setAdapter(adapter);
         return view;
     }

@@ -7,7 +7,7 @@ import retrofit2.http.GET;
 
 public interface Api {
 
-    @GET("/state_data.json")
+    @GET("https://api.covidindiatracker.com/state_data.json")
     Call<CovidStateData> getAllCovidData();
 
 }

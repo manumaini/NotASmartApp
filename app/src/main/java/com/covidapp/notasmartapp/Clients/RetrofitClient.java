@@ -12,7 +12,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 import retrofit2.converter.scalars.ScalarsConverterFactory;
 
 public class RetrofitClient {
-    //private final String BASE_URL = "https://api.covidindiatracker.com";
+    private final String BASE_URL = "https://api.covidindiatracker.com";
     public static RetrofitClient mInstance;
     private Retrofit retrofit;
 
@@ -27,6 +27,7 @@ public class RetrofitClient {
                 .build();
 
         retrofit = new Retrofit.Builder()
+                .baseUrl(BASE_URL)
                 .client(client)
                 .addConverterFactory(GsonConverterFactory.create())
                 .addConverterFactory(ScalarsConverterFactory.create())

@@ -41,4 +41,17 @@ dependencies {
     //loading animation
     implementation 'com.github.ybq:Android-SpinKit:1.4.0'
 
+    //logging interceptor
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.7.2'
+
+    //scale convertor for String response
+    implementation 'com.squareup.retrofit2:converter-scalars:2.9.0'
+
+    //multidex
+    implementation 'com.android.support:multidex:1.0.3'
+
+    //http requesting service library retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+
 }

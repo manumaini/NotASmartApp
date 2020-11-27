@@ -16,6 +16,8 @@ import com.github.mikephil.charting.charts.PieChart;
 import com.google.android.gms.common.api.Api;
 
 import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class CovidFragment extends Fragment {
 
@@ -25,7 +27,7 @@ public class CovidFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_covid,container,false);
+        View view = inflater.inflate(R.layout.fragment_covid, container, false);
 //        pieChart=view.findViewById(R.id.pieChart);
         return view;
     }
@@ -33,6 +35,16 @@ public class CovidFragment extends Fragment {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-//        api=RetrofitClient.getInstance().getApi();
+        RetrofitClient.getInstance().getApi().getAllCovidData().enqueue(new Callback<CovidStateData>() {
+            @Override
+            public void onResponse(Call<CovidStateData> call, Response<CovidStateData> response) {
+
+            }
+
+            @Override
+            public void onFailure(Call<CovidStateData> call, Throwable t) {
+
+            }
+        });
     }
 }

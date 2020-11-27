@@ -1,6 +1,7 @@
 package com.covidapp.notasmartapp.Clients;
 
-import com.google.android.gms.common.api.Api;
+
+import com.covidapp.notasmartapp.Interfaces.Api;
 
 import java.util.concurrent.TimeUnit;
 

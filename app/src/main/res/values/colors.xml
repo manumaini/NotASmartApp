@@ -8,4 +8,6 @@
     <color name="colorLightGrey">#EEEEEE</color>
     <color name="colorDarkGrey">#BEBEBE</color>
     <color name="colorBlack">#000000</color>
+
+    <color name="colorStateName">#FD1414</color>
 </resources>

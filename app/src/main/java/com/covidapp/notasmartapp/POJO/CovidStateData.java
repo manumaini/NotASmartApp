@@ -7,22 +7,22 @@ import java.util.List;
 public class CovidStateData {
 
     @SerializedName("state")
-    private String state;
+    public String state;
     @SerializedName("active")
-    private int activeCases;
+    public int activeCases;
     @SerializedName("confirmed")
-    private int confirmedCases;
+    public int confirmedCases;
     @SerializedName("recovered")
-    private int recoveredCases;
+    public int recoveredCases;
     @SerializedName("deaths")
-    private int deaths;
+    public int deaths;
     @SerializedName("districtData")
-    private List<CovidDistrictData> districtData=null;
+    public List<CovidDistrictData> districtData=null;
 
     public class CovidDistrictData{
         @SerializedName("name")
-        private String name;
+        public String name;
         @SerializedName("confirmed")
-        private int confirmedDistrictCases;
+        public int confirmedDistrictCases;
     }
 }

@@ -2,6 +2,8 @@ package com.covidapp.notasmartapp.Interfaces;
 
 import com.covidapp.notasmartapp.POJO.CovidStateData;
 
+import java.util.List;
+
 import retrofit2.Call;
 import retrofit2.http.GET;
 

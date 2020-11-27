@@ -26,14 +26,13 @@ public class CovidFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_covid,container,false);
-        pieChart=view.findViewById(R.id.pieChart);
+//        pieChart=view.findViewById(R.id.pieChart);
         return view;
     }
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        api=RetrofitClient.getInstance().getApi();
-        Call<CovidStateData> call=
+//        api=RetrofitClient.getInstance().getApi();
     }
 }

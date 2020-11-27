@@ -73,7 +73,7 @@ public class RegistrationActivity extends AppCompatActivity implements MainContr
                 }else if(password.getText().toString().isEmpty()){
                     password.setError("Required Field");
                 }else{
-                    presenter.register(email.getText().toString(),password.getText().toString());
+                    presenter.register(email.getText().toString().trim(),password.getText().toString().trim());
                 }
                 break;
         }

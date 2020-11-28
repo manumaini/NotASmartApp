@@ -1,6 +1,7 @@
 package com.covidapp.notasmartapp.Interfaces;
 
 import com.covidapp.notasmartapp.POJO.CovidStateData;
+import com.covidapp.notasmartapp.POJO.HealthNewsResponse;
 
 import java.util.List;
 
@@ -11,5 +12,8 @@ public interface Api {
 
     @GET("https://api.covidindiatracker.com/state_data.json")
     Call<CovidStateData> getAllCovidData();
+
+    @GET("http://newsapi.org/v2/top-headlines?country=in&category=health&apiKey=8a6ac3a1466e47afaff19ef069cc02e9")
+    Call<HealthNewsResponse> getNews();
 
 }

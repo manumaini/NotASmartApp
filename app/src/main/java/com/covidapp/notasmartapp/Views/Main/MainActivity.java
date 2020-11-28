@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     private DrawerLayout drawer;
     private NavigationView navigationView;
+    private Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +34,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         //controllers
         drawer = findViewById(R.id.drawer_layout);
         navigationView = findViewById(R.id.nav_view);
-        Toolbar toolbar = findViewById(R.id.toolbar);
+        toolbar = findViewById(R.id.toolbar);
 
 
         //initialization
@@ -45,8 +46,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         toggle.syncState();
         if(savedInstanceState == null){
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new HealthNewsFragment()).commit();
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new HealthNewsFragment(this)).commit();
             navigationView.setCheckedItem(R.id.menu_healthNews);
+            toolbar.setTitle("Health News");
         }
     }
 
@@ -64,13 +66,15 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
         switch(menuItem.getItemId()){
             case R.id.menu_healthNews:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new HealthNewsFragment()).commit();
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new HealthNewsFragment(this)).commit();
                 navigationView.setCheckedItem(R.id.menu_healthNews);
+                toolbar.setTitle("Health News");
                 break;
 
             case R.id.menu_covidNews:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new CovidFragment()).commit();
                 navigationView.setCheckedItem(R.id.menu_covidNews);
+                toolbar.setTitle("Co-vid News");
                 break;
 
         }

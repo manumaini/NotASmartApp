@@ -11,6 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".Views.RegistrationActivity"></activity>
+        <activity android:name=".Views.WebActivity"> </activity>
         <activity android:name=".Views.LoginActivity" >
 
         </activity>

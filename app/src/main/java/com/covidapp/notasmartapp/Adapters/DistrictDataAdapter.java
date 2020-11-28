@@ -34,7 +34,7 @@ public class DistrictDataAdapter extends ArrayAdapter<CovidStateData.CovidDistri
         districtName.setText(dataPos.name);
 
         TextView confirmed=listView.findViewById(R.id.confirmedCase);
-        confirmed.setText(dataPos.confirmedDistrictCases);
+        confirmed.setText(dataPos.confirmedDistrictCases+"");
 
         return listView;
     }

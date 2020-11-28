@@ -46,6 +46,7 @@ public class RegistrationActivity extends AppCompatActivity implements MainContr
     public void onSuccess(FirebaseUser user) {
         Toast.makeText(this, user.getEmail()+"registered", Toast.LENGTH_LONG).show();
         Intent intent = new Intent(RegistrationActivity.this, MainActivity.class);
+        intent.putExtra("user_email",user.getEmail());
         startActivity(intent);
     }
 

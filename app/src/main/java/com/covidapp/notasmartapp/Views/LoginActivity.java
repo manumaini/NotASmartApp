@@ -50,6 +50,7 @@ public class LoginActivity extends AppCompatActivity implements MainContract.Log
     public void onSuccess(FirebaseUser user) {
         Toast.makeText(this, user.getEmail() + " logged in", Toast.LENGTH_LONG).show();
         Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+        intent.putExtra("user_email",user.getEmail());
         startActivity(intent);
     }
 

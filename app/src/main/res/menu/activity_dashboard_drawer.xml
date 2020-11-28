@@ -2,11 +2,21 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
+        android:iconTint="@color/colorAccent"
+        android:icon="@drawable/ic_hospital_user_solid"
         android:id="@+id/menu_healthNews"
         android:title="Health News" />
 
     <item
+        android:iconTint="@color/colorAccent"
+        android:icon="@drawable/ic_virus_solid"
         android:id="@+id/menu_covidNews"
         android:title="Covid News" />
+
+    <item
+        android:iconTint="@color/colorAccent"
+        android:icon="@drawable/ic_map"
+        android:title="Find Hospitals"
+        android:id="@+id/menu_hospitals"/>
 
 </menu>

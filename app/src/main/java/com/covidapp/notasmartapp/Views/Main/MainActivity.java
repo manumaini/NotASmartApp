@@ -3,6 +3,7 @@ package com.covidapp.notasmartapp.Views.Main;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -40,6 +41,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         //initialization
         setSupportActionBar(toolbar);
         navigationView.setNavigationItemSelectedListener(this);
+        TextView user_email = navigationView.getHeaderView(0).findViewById(R.id.menu_email);
+        user_email.setText(getIntent().getStringExtra("user_email"));
 
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this,drawer,toolbar,R.string.navigation_drawer_open,R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
@@ -76,6 +79,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 navigationView.setCheckedItem(R.id.menu_covidNews);
                 toolbar.setTitle("Co-vid News");
                 break;
+
+            case R.id.menu_hospitals:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new MapFragment()).commit();
+                navigationView.setCheckedItem(R.id.menu_hospitals);
+                toolbar.setTitle("Hospitals");
+                break;
+
 
         }
         drawer.closeDrawer(GravityCompat.START);

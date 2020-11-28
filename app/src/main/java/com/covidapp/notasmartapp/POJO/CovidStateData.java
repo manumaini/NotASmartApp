@@ -19,10 +19,15 @@ public class CovidStateData {
     @SerializedName("districtData")
     public List<CovidDistrictData> districtData=null;
 
-    public class CovidDistrictData{
+    public static class CovidDistrictData{
         @SerializedName("name")
         public String name;
         @SerializedName("confirmed")
         public int confirmedDistrictCases;
+
+        public CovidDistrictData(String name,int confirmedDistrictCases){
+            this.name=name;
+            this.confirmedDistrictCases=confirmedDistrictCases;
+        }
     }
 }

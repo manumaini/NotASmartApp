@@ -16,6 +16,9 @@
        <TextView
            android:id="@+id/stateName"
            android:layout_width="300dp"
+           android:paddingTop="5dp"
+           android:paddingLeft="8dp"
+           android:paddingBottom="3dp"
            android:layout_height="wrap_content"
            android:layout_alignParentEnd="true"
            android:background="@color/colorAccent"
@@ -52,5 +55,22 @@
         android:textStyle="bold"
         android:textSize="19sp"/>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        android:fontFamily="sans-serif-medium"
+        android:textAlignment="center"
+        android:layout_marginLeft="55dp"
+        android:textColor="#1A3AF1"
+        android:text="@string/analysis_line"/>
+
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/listView"/>
 
 </LinearLayout>

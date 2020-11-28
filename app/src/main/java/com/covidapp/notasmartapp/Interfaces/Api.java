@@ -10,8 +10,8 @@ import retrofit2.http.GET;
 
 public interface Api {
 
-    @GET("https://api.covidindiatracker.com/state_data.json")
-    Call<CovidStateData> getAllCovidData();
+    @GET("/state_data.json")
+    Call<List<CovidStateData>> getAllCovidData();
 
     @GET("http://newsapi.org/v2/top-headlines?country=in&category=health&apiKey=8a6ac3a1466e47afaff19ef069cc02e9")
     Call<HealthNewsResponse> getNews();

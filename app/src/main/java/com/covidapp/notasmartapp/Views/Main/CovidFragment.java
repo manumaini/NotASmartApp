@@ -2,10 +2,10 @@ package com.covidapp.notasmartapp.Views.Main;
 
 import android.graphics.Color;
 import android.os.Bundle;
-import android.provider.CalendarContract;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -22,6 +22,7 @@ import com.github.mikephil.charting.data.PieEntry;
 import com.github.mikephil.charting.utils.ColorTemplate;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -31,12 +32,15 @@ public class CovidFragment extends Fragment {
 
     private PieChart pieChart;
     private Api api;
+    private TextView totalCases,stateNameText;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_covid,container,false);
         pieChart=view.findViewById(R.id.pieChart);
+        totalCases=view.findViewById(R.id.totalCases);
+        stateNameText=view.findViewById(R.id.stateName);
         return view;
     }
 
@@ -44,17 +48,22 @@ public class CovidFragment extends Fragment {
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         api=RetrofitClient.getInstance().getApi();
-        Call<CovidStateData> call=api.getAllCovidData();
-        call.enqueue(new Callback<CovidStateData>() {
+        Call<List<CovidStateData>> call=api.getAllCovidData();
+        call.enqueue((new Callback<List<CovidStateData>>() {
             @Override
-            public void onResponse(Call<CovidStateData> call, Response<CovidStateData> response) {
-                for (int i = 0; i < 1; i++) {
-                    CovidStateData data = response.body();
+            public void onResponse(Call<List<CovidStateData>> call, Response<List<CovidStateData>> response) {
+                List<CovidStateData> dataList=response.body();
+                for(CovidStateData data:dataList){
+
+                    String stateName=data.state;
+                    stateNameText.setText(stateName);
+
                     int activeCase = data.activeCases;
                     int recoveredCase = data.recoveredCases;
                     int deaths = data.deaths;
                     int confirmed = data.confirmedCases;
                     ArrayList<PieEntry> pieEntries = new ArrayList<>();
+                    totalCases.setText("Total: "+confirmed);
 
                     pieEntries.add(new PieEntry(activeCase, "Active"));
                     pieEntries.add(new PieEntry(recoveredCase, "Recovered"));
@@ -69,15 +78,17 @@ public class CovidFragment extends Fragment {
 
                     pieChart.setData(pieData);
                     pieChart.getDescription().setEnabled(false);
-                    pieChart.setCenterText("Analysis of Maharashtra");
+                    pieChart.setCenterText("Analysis of "+stateName);
                     pieChart.animate();
+                    return;
                 }
             }
+
             @Override
-            public void onFailure(Call<CovidStateData> call, Throwable t) {
-                t.getMessage();
-                call.cancel();
+            public void onFailure(Call<List<CovidStateData>> call, Throwable t) {
+
             }
-        });
+        }));
+
     }
 }

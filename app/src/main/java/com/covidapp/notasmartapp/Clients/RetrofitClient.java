@@ -1,6 +1,7 @@
 package com.covidapp.notasmartapp.Clients;
 
 
+
 import com.covidapp.notasmartapp.Interfaces.Api;
 
 import java.util.concurrent.TimeUnit;
@@ -12,7 +13,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 import retrofit2.converter.scalars.ScalarsConverterFactory;
 
 public class RetrofitClient {
-    //private final String BASE_URL = "https://api.covidindiatracker.com";
+    private final String BASE_URL = "https://api.covidindiatracker.com";
     public static RetrofitClient mInstance;
     private Retrofit retrofit;
 
@@ -28,6 +29,7 @@ public class RetrofitClient {
 
         retrofit = new Retrofit.Builder()
                 .client(client)
+                .baseUrl(BASE_URL)
                 .addConverterFactory(GsonConverterFactory.create())
                 .addConverterFactory(ScalarsConverterFactory.create())
                 .build();

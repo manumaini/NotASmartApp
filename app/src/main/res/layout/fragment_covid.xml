@@ -2,21 +2,32 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:padding="20dp">
 
     <TextView
+        android:id="@+id/stateName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@color/colorStateName"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="25dp"
-        android:text="Maharashtra"
-        android:textSize="23sp"
+        android:textSize="21sp"
         android:textStyle="bold"/>
 
     <com.github.mikephil.charting.charts.PieChart
         android:id="@+id/pieChart"
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"/>
+
+    <TextView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:id="@+id/totalCases"
+        android:textColor="@color/colorStateName"
+        android:textStyle="bold"
+        android:textSize="19sp"/>
+
 
 </LinearLayout>

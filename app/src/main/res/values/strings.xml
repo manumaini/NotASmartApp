@@ -3,6 +3,7 @@
     <string name="sign_up">Don\'t have an account ? <u>Sign Up</u></string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
+
     <string-array name="choose_state">
         <item>Maharashtra</item>
         <item>Tamil Nadu</item>

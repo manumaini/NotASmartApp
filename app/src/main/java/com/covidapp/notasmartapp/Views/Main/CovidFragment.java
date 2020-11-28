@@ -3,7 +3,6 @@ package com.covidapp.notasmartapp.Views.Main;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -110,6 +109,7 @@ public class CovidFragment extends Fragment {
                     pieChart.setCenterText("Analysis of "+stateName);
 
                     pieChart.animate();
+                    districtList = new ArrayList<>();
                     List<CovidStateData.CovidDistrictData> district=data.districtData;
                     for(CovidStateData.CovidDistrictData dData : district){
                         String dName=dData.name;

@@ -5,11 +5,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.core.content.ContextCompat;
 
 import com.covidapp.notasmartapp.POJO.CovidStateData;
 import com.covidapp.notasmartapp.R;
@@ -34,7 +32,7 @@ public class DistrictDataAdapter extends ArrayAdapter<CovidStateData.CovidDistri
         districtName.setText(dataPos.name);
 
         TextView confirmed=listView.findViewById(R.id.confirmedCase);
-        confirmed.setText(dataPos.confirmedDistrictCases);
+        confirmed.setText(dataPos.confirmedDistrictCases+"");
 
         return listView;
     }

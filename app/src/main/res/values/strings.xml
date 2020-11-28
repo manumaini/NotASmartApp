@@ -3,4 +3,15 @@
     <string name="sign_up">Don\'t have an account ? <u>Sign Up</u></string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string-array name="choose_state">
+        <item>Maharashtra</item>
+        <item>Tamil Nadu</item>
+        <item>Karnataka</item>
+        <item>Punjab</item>
+        <item>Gujarat</item>
+        <item>Kerala</item>
+        <item>Uttar Pradesh</item>
+        <item>West Bengal</item>
+        <item>Odisha</item>
+    </string-array>
 </resources>

@@ -1,6 +1,7 @@
 package com.covidapp.notasmartapp.Views.Main;
 
-import android.graphics.Color;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -33,7 +34,7 @@ public class CovidFragment extends Fragment {
     private PieChart pieChart;
     private Api api;
     private TextView totalCases,stateNameText;
-
+    private int position=0;
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -41,6 +42,21 @@ public class CovidFragment extends Fragment {
         pieChart=view.findViewById(R.id.pieChart);
         totalCases=view.findViewById(R.id.totalCases);
         stateNameText=view.findViewById(R.id.stateName);
+        stateNameText.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertDialog.Builder builder=new AlertDialog.Builder(getContext());
+                String[] list=getContext().getResources().getStringArray(R.array.choose_state);
+                builder.setTitle("Choose a State")
+                        .setSingleChoiceItems(list, position, new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int i) {
+                                position=i;
+                            }
+                        });
+                builder.create();
+            }
+        });
         return view;
     }
 
@@ -65,20 +81,19 @@ public class CovidFragment extends Fragment {
                     ArrayList<PieEntry> pieEntries = new ArrayList<>();
                     totalCases.setText("Total: "+confirmed);
 
-                    pieEntries.add(new PieEntry(activeCase, "Active"));
-                    pieEntries.add(new PieEntry(recoveredCase, "Recovered"));
-                    pieEntries.add(new PieEntry(deaths, "Deaths"));
+                    pieEntries.add(new PieEntry(activeCase,"Active"));
+                    pieEntries.add(new PieEntry(recoveredCase,"Recovered"));
+                    pieEntries.add(new PieEntry(deaths,"Deaths"));
 
                     PieDataSet pieDataSet = new PieDataSet(pieEntries, "Analysis");
                     pieDataSet.setColors(ColorTemplate.COLORFUL_COLORS);
-                    pieDataSet.setValueTextColor(Color.BLACK);
-                    pieDataSet.setValueTextSize(16f);
 
                     PieData pieData = new PieData(pieDataSet);
 
                     pieChart.setData(pieData);
                     pieChart.getDescription().setEnabled(false);
                     pieChart.setCenterText("Analysis of "+stateName);
+
                     pieChart.animate();
                     return;
                 }

@@ -177,6 +177,7 @@ public class CovidFragment extends Fragment {
                         pieChart.setDrawHoleEnabled(false);
                         pieChart.setDragDecelerationFrictionCoef(0.67f);
                         pieChart.setExtraOffsets(5,10,5,5);
+                        pieChart.notifyDataSetChanged();
 
                         districtList.clear();
                         List<CovidStateData.CovidDistrictData> district=data.districtData;

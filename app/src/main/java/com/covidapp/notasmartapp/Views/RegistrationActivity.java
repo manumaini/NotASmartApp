@@ -25,6 +25,7 @@ public class RegistrationActivity extends AppCompatActivity implements MainContr
     private Button register;
     private RegistrationPresenter presenter;
     private RelativeLayout loading;
+    private EditText phone;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,23 +37,24 @@ public class RegistrationActivity extends AppCompatActivity implements MainContr
         password = findViewById(R.id.registration_password);
         register = findViewById(R.id.registerButton);
         loading = findViewById(R.id.loading_screen);
+        phone = findViewById(R.id.registration_phone);
 
         //initializations
         PushDownAnim.setPushDownAnimTo(register).setOnClickListener(this);
-        presenter = new RegistrationPresenter(this,this);
+        presenter = new RegistrationPresenter(this, this);
     }
 
     @Override
     public void onSuccess(FirebaseUser user) {
-        Toast.makeText(this, user.getEmail()+"registered", Toast.LENGTH_LONG).show();
+        Toast.makeText(this, user.getEmail() + "registered", Toast.LENGTH_LONG).show();
         Intent intent = new Intent(RegistrationActivity.this, MainActivity.class);
-        intent.putExtra("user_email",user.getEmail());
+        intent.putExtra("user_email", user.getEmail());
         startActivity(intent);
     }
 
     @Override
     public void onFailed(String error) {
-        Toast.makeText(this,error, Toast.LENGTH_LONG).show();
+        Toast.makeText(this, error, Toast.LENGTH_LONG).show();
     }
 
     @Override
@@ -68,14 +70,16 @@ public class RegistrationActivity extends AppCompatActivity implements MainContr
 
     @Override
     public void onClick(View view) {
-        switch(view.getId()){
+        switch (view.getId()) {
             case R.id.registerButton:
-                if(email.getText().toString().isEmpty()){
+                if (email.getText().toString().isEmpty()) {
                     email.setError("Required Field");
-                }else if(password.getText().toString().isEmpty()){
+                } else if (password.getText().toString().isEmpty()) {
                     password.setError("Required Field");
-                }else{
-                    presenter.register(email.getText().toString().trim(),password.getText().toString().trim());
+                } else if (phone.getText().toString().isEmpty()) {
+                    phone.setError("Required Field");
+                } else {
+                    presenter.register(email.getText().toString().trim(), password.getText().toString().trim());
                 }
                 break;
         }

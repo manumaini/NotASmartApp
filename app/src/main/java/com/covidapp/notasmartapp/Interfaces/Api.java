@@ -2,11 +2,13 @@ package com.covidapp.notasmartapp.Interfaces;
 
 import com.covidapp.notasmartapp.POJO.CovidStateData;
 import com.covidapp.notasmartapp.POJO.HealthNewsResponse;
+import com.covidapp.notasmartapp.POJO.LocationResponse;
 
 import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.http.GET;
+import retrofit2.http.Query;
 
 public interface Api {
 
@@ -15,5 +17,8 @@ public interface Api {
 
     @GET("http://newsapi.org/v2/top-headlines?country=in&category=health&apiKey=8a6ac3a1466e47afaff19ef069cc02e9")
     Call<HealthNewsResponse> getNews();
+
+    @GET("https://maps.googleapis.com/maps/api/place/nearbysearch/json?radius=500&types=hospital&name=harbour&key=AIzaSyAg6E9sTXVJDv7RMpO3CU6LNsKTm-UqOMs")
+    Call<LocationResponse> getLocation(@Query("location") String location);
 
 }

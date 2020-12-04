@@ -26,9 +26,32 @@
 
     <TextView
         android:layout_marginTop="36dp"
-        android:id="@+id/email_label"
+        android:id="@+id/phone_label"
         android:layout_marginHorizontal="24dp"
         android:layout_below="@id/secureLogin"
+        android:textSize="16sp"
+        android:textColor="@color/colorBlack"
+        android:text="Phone Number:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:inputType="number"
+        android:paddingHorizontal="16dp"
+        android:textColor="@color/colorBlack"
+        android:id="@+id/registration_phone"
+        android:layout_marginTop="4dp"
+        android:layout_below="@id/phone_label"
+        android:layout_marginHorizontal="16dp"
+        android:background="@drawable/textfield_backgrouond"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"/>
+
+    <TextView
+        android:layout_marginTop="16dp"
+        android:id="@+id/email_label"
+        android:layout_marginHorizontal="24dp"
+        android:layout_below="@id/registration_phone"
         android:textSize="16sp"
         android:textColor="@color/colorBlack"
         android:text="Email:"

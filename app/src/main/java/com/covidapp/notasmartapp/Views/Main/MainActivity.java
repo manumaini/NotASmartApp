@@ -41,8 +41,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         //initialization
         setSupportActionBar(toolbar);
         navigationView.setNavigationItemSelectedListener(this);
-        TextView user_email = navigationView.getHeaderView(0).findViewById(R.id.menu_email);
-        user_email.setText(getIntent().getStringExtra("user_email"));
+
 
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this,drawer,toolbar,R.string.navigation_drawer_open,R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
@@ -60,9 +59,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         super.onStart();
         mAuth = FirebaseAuth.getInstance();
         user = mAuth.getCurrentUser();
+        TextView user_email = navigationView.getHeaderView(0).findViewById(R.id.menu_email);
+
         if(user == null){
             startActivity(new Intent(MainActivity.this, LoginActivity.class));
         }
+        user_email.setText(user.getEmail());
     }
 
     @Override

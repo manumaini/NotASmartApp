@@ -1,5 +1,7 @@
 package com.covidapp.notasmartapp.Interfaces;
 
+import android.location.Location;
+
 import com.covidapp.notasmartapp.POJO.Article;
 import com.google.firebase.auth.FirebaseUser;
 
@@ -35,6 +37,18 @@ public interface MainContract {
 
     interface HealthNewsView{
         void onSuccess(List<Article> list);
+        void onFailed(String error);
+        void showLoading();
+        void hideLoading();
+    }
+
+    interface MapPresenter{
+        void loadLocation(Location location);
+
+    }
+
+    interface MapView{
+        void onSuccess();
         void onFailed(String error);
         void showLoading();
         void hideLoading();

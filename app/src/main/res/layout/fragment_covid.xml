@@ -17,23 +17,23 @@
            android:id="@+id/stateName"
            android:layout_width="300dp"
            android:paddingTop="5dp"
-           android:paddingLeft="8dp"
+           android:paddingLeft="12dp"
            android:paddingBottom="3dp"
            android:layout_height="wrap_content"
            android:layout_alignParentEnd="true"
-           android:background="@color/colorAccent"
+           android:background="#95ED2F"
            android:textColor="@color/colorBlack"
-           android:textSize="21sp"
+           android:textSize="19sp"
            android:textStyle="bold"
            app:layout_constraintBottom_toBottomOf="parent"
            app:layout_constraintStart_toStartOf="parent"
            app:layout_constraintTop_toTopOf="parent" />
 
        <ImageView
-           android:layout_width="30dp"
+           android:layout_width="25dp"
            android:layout_height="wrap_content"
            android:layout_marginEnd="28dp"
-           android:background="@color/colorAccent"
+           android:background="#95ED2F"
            android:src="@drawable/ic_baseline_arrow_drop_down_24"
            app:layout_constraintBottom_toBottomOf="parent"
            app:layout_constraintEnd_toEndOf="parent"
@@ -43,14 +43,16 @@
 
     <com.github.mikephil.charting.charts.PieChart
         android:id="@+id/pieChart"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
+        android:padding="20dp"
         android:layout_width="match_parent"
-        android:layout_height="200dp"/>
+        android:layout_height="240dp"/>
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/totalCases"
+        android:paddingLeft="100dp"
         android:textColor="@color/colorStateName"
         android:textStyle="bold"
         android:textSize="19sp"/>
@@ -60,10 +62,10 @@
         android:layout_height="wrap_content"
         android:padding="15dp"
         android:textStyle="bold"
-        android:textSize="15sp"
+        android:textSize="21sp"
         android:fontFamily="sans-serif-medium"
         android:textAlignment="center"
-        android:layout_marginLeft="55dp"
+        android:layout_marginLeft="39dp"
         android:textColor="#1A3AF1"
         android:text="@string/analysis_line"/>
 
@@ -71,6 +73,8 @@
     <ListView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/listView"/>
+        android:id="@+id/listView"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"/>
 
 </LinearLayout>

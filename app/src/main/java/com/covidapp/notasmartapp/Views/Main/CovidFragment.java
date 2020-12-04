@@ -3,11 +3,14 @@ package com.covidapp.notasmartapp.Views.Main;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -18,6 +21,7 @@ import com.covidapp.notasmartapp.Clients.RetrofitClient;
 import com.covidapp.notasmartapp.Interfaces.Api;
 import com.covidapp.notasmartapp.POJO.CovidStateData;
 import com.covidapp.notasmartapp.R;
+import com.github.mikephil.charting.animation.Easing;
 import com.github.mikephil.charting.charts.PieChart;
 import com.github.mikephil.charting.data.PieData;
 import com.github.mikephil.charting.data.PieDataSet;
@@ -50,6 +54,7 @@ public class CovidFragment extends Fragment {
         totalCases=view.findViewById(R.id.totalCases);
         stateNameText=view.findViewById(R.id.stateName);
         listView=view.findViewById(R.id.listView);
+        districtList=new ArrayList<>();
         stateNameText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -99,17 +104,22 @@ public class CovidFragment extends Fragment {
                     pieEntries.add(new PieEntry(recoveredCase,"Recovered"));
                     pieEntries.add(new PieEntry(deaths,"Deaths"));
 
-                    PieDataSet pieDataSet = new PieDataSet(pieEntries, "Analysis");
-                    pieDataSet.setColors(ColorTemplate.COLORFUL_COLORS);
+                    PieDataSet pieDataSet = new PieDataSet(pieEntries,"Analysis");
+                    pieDataSet.setColors(ColorTemplate.MATERIAL_COLORS);
+                    pieDataSet.setSliceSpace(1f);
+                    pieDataSet.setSelectionShift(3f);
+                    pieDataSet.setValueTextSize(13f);
 
                     PieData pieData = new PieData(pieDataSet);
 
                     pieChart.setData(pieData);
                     pieChart.getDescription().setEnabled(false);
-                    pieChart.setCenterText("Analysis of "+stateName);
+                    pieChart.setDrawHoleEnabled(false);
+                    pieChart.animateY(1000,Easing.EaseInCubic);
+                    pieChart.setDragDecelerationFrictionCoef(0.67f);
+                    pieChart.setDrawEntryLabels(false);
+                    pieChart.setExtraOffsets(5,10,5,5);
 
-                    pieChart.animate();
-                    districtList = new ArrayList<>();
                     List<CovidStateData.CovidDistrictData> district=data.districtData;
                     for(CovidStateData.CovidDistrictData dData : district){
                         String dName=dData.name;
@@ -153,30 +163,36 @@ public class CovidFragment extends Fragment {
                         pieEntries.add(new PieEntry(recoveredCase, "Recovered"));
                         pieEntries.add(new PieEntry(deaths, "Deaths"));
 
-                        PieDataSet pieDataSet = new PieDataSet(pieEntries, "Analysis");
-                        pieDataSet.setColors(ColorTemplate.COLORFUL_COLORS);
+                        PieDataSet pieDataSet = new PieDataSet(pieEntries,"Analysis");
+                        pieDataSet.setColors(ColorTemplate.MATERIAL_COLORS);
+                        pieDataSet.setSliceSpace(1f);
+                        pieDataSet.setSelectionShift(2f);
+                        pieDataSet.setValueTextSize(13f);
 
                         PieData pieData = new PieData(pieDataSet);
 
                         pieChart.setData(pieData);
+                        pieChart.animateY(1000,Easing.EaseInCubic);
                         pieChart.getDescription().setEnabled(false);
-                        pieChart.setCenterText("Analysis of " + stateName);
+                        pieChart.setDrawHoleEnabled(false);
+                        pieChart.setDragDecelerationFrictionCoef(0.67f);
+                        pieChart.setExtraOffsets(5,10,5,5);
+                        pieChart.notifyDataSetChanged();
 
-                        pieChart.animate();
-
+                        districtList.clear();
                         List<CovidStateData.CovidDistrictData> district=data.districtData;
                         for(CovidStateData.CovidDistrictData dData : district){
                             String dName=dData.name;
                             int dConfirmed=dData.confirmedDistrictCases;
-//                            districtList.add(new CovidStateData.CovidDistrictData(dName,dConfirmed));
+                            districtList.add(new CovidStateData.CovidDistrictData(dName,dConfirmed));
                         }
-//                        districtDataAdapter=new DistrictDataAdapter(getContext(),districtList);
-//                        listView.setAdapter(districtDataAdapter);
+                        districtDataAdapter=new DistrictDataAdapter(getContext(),districtList);
+                        listView.setAdapter(districtDataAdapter);
                         return;
+
                     }
                 }
             }
-
             @Override
             public void onFailure(Call<List<CovidStateData>> call, Throwable t) {
 

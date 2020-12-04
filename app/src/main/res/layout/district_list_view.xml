@@ -2,9 +2,9 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="30dp"
-    android:background="@color/colorMaroon"
-    android:layout_margin="2dp">
+    android:layout_height="35dp"
+    android:background="#068849"
+    android:layout_marginTop="2dp">
 
     <TextView
         android:id="@+id/districtName"
@@ -14,7 +14,6 @@
         android:textColor="@color/colorWhite"
         android:padding="8dp"
         android:textStyle="bold"
-        android:background="@color/colorMaroon"
         android:textSize="12dp"/>
 
     <TextView
@@ -26,7 +25,6 @@
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
         android:textStyle="bold"
-        android:background="@color/colorMaroon"
         android:textColor="@color/colorYellow"
         android:textSize="12dp" />
 

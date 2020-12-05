@@ -46,4 +46,6 @@
     </string-array>
 
     <string name="analysis_line">Analysis of City and Districts"</string>
+    <string name="call_ambulance">Call Ambulance</string>
+
 </resources>

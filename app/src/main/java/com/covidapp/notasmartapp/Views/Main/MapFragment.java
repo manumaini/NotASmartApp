@@ -17,14 +17,23 @@ import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 
 import com.covidapp.notasmartapp.Interfaces.MainContract;
+import com.covidapp.notasmartapp.POJO.Result;
 import com.covidapp.notasmartapp.Presenters.MapPresenter;
 import com.covidapp.notasmartapp.R;
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
+import com.google.android.gms.maps.CameraUpdate;
+import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.LatLngBounds;
+import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.tasks.OnSuccessListener;
+
+import java.util.List;
 
 public class MapFragment extends Fragment implements MainContract.MapView {
 
@@ -96,12 +105,26 @@ public class MapFragment extends Fragment implements MainContract.MapView {
     }
 
     @Override
-    public void onSuccess() {
+    public void onSuccess(List<Result> loclist) {
+        LatLng latLng=null;
+        LatLngBounds.Builder builder = LatLngBounds.builder();
+        for(Result result : loclist){
+            latLng= new LatLng(result.getGeometry().getLocation().getLat(),result.getGeometry().getLocation().getLng());
+            MarkerOptions options = new MarkerOptions().position(latLng).title(result.getName()).icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN));
+            map.addMarker(options);
+            builder.include(latLng);
+
+        }
+        LatLngBounds bounds = builder.build();
+        CameraUpdate cu = CameraUpdateFactory.newLatLngBounds(bounds, 25,25,1);
+        map.animateCamera(cu);
+
 
     }
 
     @Override
     public void onFailed(String error) {
+
 
     }
 

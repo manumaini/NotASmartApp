@@ -3,6 +3,7 @@ package com.covidapp.notasmartapp.Interfaces;
 import android.location.Location;
 
 import com.covidapp.notasmartapp.POJO.Article;
+import com.covidapp.notasmartapp.POJO.Result;
 import com.google.firebase.auth.FirebaseUser;
 
 import java.util.List;
@@ -48,7 +49,7 @@ public interface MainContract {
     }
 
     interface MapView{
-        void onSuccess();
+        void onSuccess(List<Result> loclist);
         void onFailed(String error);
         void showLoading();
         void hideLoading();

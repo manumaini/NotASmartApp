@@ -36,6 +36,7 @@ public class MapPresenter implements MainContract.MapPresenter {
 
     @Override
     public void loadLocation(Location location) {
+        mapView.showLoading();
         Log.d(TAG, "loadLocation: "+location.getLatitude()+","+location.getLongitude());
         LatLng latLng = new LatLng(location.getLatitude(),location.getLongitude());
 
@@ -45,12 +46,14 @@ public class MapPresenter implements MainContract.MapPresenter {
                     public void onResponse(Call<LocationResponse> call, Response<LocationResponse> response) {
                         List<Result> loclist = response.body().getResults();
                         mapView.onSuccess(loclist);
+                        mapView.hideLoading();
 
                     }
 
                     @Override
                     public void onFailure(Call<LocationResponse> call, Throwable t) {
                         mapView.onFailed(t.getLocalizedMessage());
+                        mapView.hideLoading();
                     }
                 });
     }

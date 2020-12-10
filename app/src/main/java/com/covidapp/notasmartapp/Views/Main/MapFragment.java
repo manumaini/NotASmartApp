@@ -10,6 +10,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -45,6 +46,8 @@ public class MapFragment extends Fragment implements MainContract.MapView {
     private final int FINE_LOCATION_REQ_CODE = 1;
     private FusedLocationProviderClient locationProviderClient;
     private final int COARSE_LOCATION_REQ_CODE = 2;
+    private RelativeLayout loading;
+
 
     @Nullable
     @Override
@@ -53,6 +56,7 @@ public class MapFragment extends Fragment implements MainContract.MapView {
         SupportMapFragment mapFragment = ((SupportMapFragment) getChildFragmentManager().findFragmentById(R.id.map));
         presenter = new MapPresenter(this, getContext(), getActivity());
         locationProviderClient = LocationServices.getFusedLocationProviderClient(getContext());
+        loading = view.findViewById(R.id.loading_screen);
 
         mapFragment.getMapAsync(new OnMapReadyCallback() {
             @Override
@@ -129,17 +133,18 @@ public class MapFragment extends Fragment implements MainContract.MapView {
 
     @Override
     public void onFailed(String error) {
-
+        Toast.makeText(getContext(),error,Toast.LENGTH_LONG);
 
     }
 
     @Override
     public void showLoading() {
+        loading.setVisibility(View.VISIBLE);
 
     }
 
     @Override
     public void hideLoading() {
-
+        loading.setVisibility(View.GONE);
     }
 }

@@ -19,4 +19,11 @@
         android:title="Find Hospitals"
         android:id="@+id/menu_hospitals"/>
 
+    <item
+        android:iconTint="@color/colorAccent"
+        android:icon="@drawable/ic_search"
+        android:title="Search"
+        android:id="@+id/menu_search"/>
+
+
 </menu>

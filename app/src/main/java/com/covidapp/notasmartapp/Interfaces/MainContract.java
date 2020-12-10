@@ -2,6 +2,7 @@ package com.covidapp.notasmartapp.Interfaces;
 
 import android.location.Location;
 
+import com.covidapp.notasmartapp.Data.Models.DiseaseSample;
 import com.covidapp.notasmartapp.POJO.Article;
 import com.covidapp.notasmartapp.POJO.Result;
 import com.google.firebase.auth.FirebaseUser;
@@ -53,6 +54,18 @@ public interface MainContract {
         void onFailed(String error);
         void showLoading();
         void hideLoading();
+    }
+
+    interface SearchView{
+        void onSuccess(List<DiseaseSample> list);
+        void onFailed(String error);
+        void showLoading();
+        void hideLoading();
+    }
+
+    interface SearchPresenter{
+        void loadData();
+        void getData();
     }
 
 

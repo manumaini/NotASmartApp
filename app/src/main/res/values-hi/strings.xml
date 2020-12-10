@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="sign_up">आपका खाता नहीं है ? <u>साइन अप करें</u></string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="Health_News">स्वास्थ्य समाचार</string>
+    <string name="Covid_News">कोविड खबरें</string>
+    <string name="Find_Hospitals">अस्पतालों का पता लगाएं</string>
+    <string name="Settings">समायोजन</string>
+
+    <string-array name="choose_state">
+        <item>महाराष्ट्र</item>
+        <item>तमिलनाडु</item>
+        <item>कर्नाटक</item>
+        <item>पंजाब</item>
+        <item>गुजरात</item>
+        <item>केरल</item>
+        <item>उत्तर प्रदेश</item>
+        <item>पश्चिम बंगाल</item>
+        <item>ओडिशा</item>
+        <item>आंध्र प्रदेश</item>
+        <item>दिल्ली</item>
+        <item>तेलंगाना</item>
+        <item>राजस्थान</item>
+        <item>हरियाणा</item>
+        <item>छत्तीसगढ़</item>
+        <item>असम</item>
+        <item>मध्य प्रदेश</item>
+        <item>जम्मू और कश्मीर</item>
+        <item>उत्तराखंड</item>
+        <item>गोवा</item>
+        <item>झारखंड</item>
+        <item>हिमाचल प्रदेश</item>
+        <item>पुडुचेरी</item>
+        <item>त्रिपुरा</item>
+        <item>मणिपुर</item>
+        <item>चंडीगढ़</item>
+        <item>अरुणाचल प्रदेश</item>
+        <item>मेघालय</item>
+        <item>नगालैंड</item>
+        <item>लद्दाख</item>
+        <item>सिक्किम</item>
+        <item>अंडमान व नोकोबार द्वीप समूह</item>
+        <item>मिजोरम</item>
+        <item>दमन और दीव</item>
+        <item>दादरा और नगर हवेली</item>
+        <item>लक्षद्वीप</item>
+    </string-array>
+
+    <string name="analysis_line">शहर और जिलों का विश्लेषण"</string>
+    <string name="call_ambulance">एम्बुलेंस को बुलाओ</string>
+</resources>

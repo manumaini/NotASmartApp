@@ -5,18 +5,26 @@
         android:iconTint="@color/colorAccent"
         android:icon="@drawable/ic_hospital_user_solid"
         android:id="@+id/menu_healthNews"
-        android:title="Health News" />
+        android:title="@string/Health_News" />
 
     <item
         android:iconTint="@color/colorAccent"
         android:icon="@drawable/ic_virus_solid"
         android:id="@+id/menu_covidNews"
-        android:title="Covid News" />
+        android:title="@string/Covid_News" />
 
     <item
         android:iconTint="@color/colorAccent"
         android:icon="@drawable/ic_map"
-        android:title="Find Hospitals"
+        android:title="@string/Find_Hospitals"
         android:id="@+id/menu_hospitals"/>
+
+    <group android:checkableBehavior="single">
+        <item
+            android:iconTint="@color/colorAccent"
+            android:icon="@drawable/ic_baseline_settings_24"
+            android:title="@string/Settings"
+            android:id="@+id/settings" />
+    </group>
 
 </menu>

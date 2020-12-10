@@ -1,37 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item
-        android:iconTint="@color/colorAccent"
-        android:icon="@drawable/ic_hospital_user_solid"
-        android:id="@+id/menu_healthNews"
-        android:title="Health News" />
-
-    <item
-        android:iconTint="@color/colorAccent"
-        android:icon="@drawable/ic_virus_solid"
-        android:id="@+id/menu_covidNews"
-        android:title="Covid News" />
-
-    <item
-        android:iconTint="@color/colorAccent"
-        android:icon="@drawable/ic_map"
-        android:title="Find Hospitals"
-        android:id="@+id/menu_hospitals"/>
-
-    <item
-        android:iconTint="@color/colorAccent"
-        android:icon="@drawable/ic_search"
-        android:title="Search"
-        android:id="@+id/menu_search"/>
-
-
     <group android:checkableBehavior="single">
         <item
+            android:id="@+id/menu_healthNews"
+            android:icon="@drawable/ic_hospital_user_solid"
             android:iconTint="@color/colorAccent"
+            android:title="Health News" />
+
+        <item
+            android:id="@+id/menu_covidNews"
+            android:icon="@drawable/ic_virus_solid"
+            android:iconTint="@color/colorAccent"
+            android:title="Covid News" />
+
+        <item
+            android:id="@+id/menu_hospitals"
+            android:icon="@drawable/ic_map"
+            android:iconTint="@color/colorAccent"
+            android:title="Find Hospitals" />
+
+        <item
+            android:id="@+id/menu_search"
+            android:icon="@drawable/ic_search"
+            android:iconTint="@color/colorAccent"
+            android:title="Search" />
+        <item
+            android:id="@+id/settings"
             android:icon="@drawable/ic_baseline_settings_24"
-            android:title="@string/Settings"
-            android:id="@+id/settings" />
+            android:iconTint="@color/colorAccent"
+            android:title="@string/Settings" />
+
     </group>
 
 </menu>

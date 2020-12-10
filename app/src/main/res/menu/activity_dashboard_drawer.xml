@@ -26,4 +26,12 @@
         android:id="@+id/menu_search"/>
 
 
+    <group android:checkableBehavior="single">
+        <item
+            android:iconTint="@color/colorAccent"
+            android:icon="@drawable/ic_baseline_settings_24"
+            android:title="@string/Settings"
+            android:id="@+id/settings" />
+    </group>
+
 </menu>

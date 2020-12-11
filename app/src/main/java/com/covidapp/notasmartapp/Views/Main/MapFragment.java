@@ -68,9 +68,15 @@ public class MapFragment extends Fragment implements MainContract.MapView {
 
         });
 
-        getCurrentLocation();
+
 
         return view;
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        getCurrentLocation();
     }
 
     private void getCurrentLocation() {

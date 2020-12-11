@@ -3,14 +3,12 @@ package com.covidapp.notasmartapp.Views.Main;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -45,6 +43,7 @@ public class CovidFragment extends Fragment {
     private ListView listView;
     private ArrayList<CovidStateData.CovidDistrictData> districtList;
     private DistrictDataAdapter districtDataAdapter;
+    private RelativeLayout loading;
 
     @Nullable
     @Override
@@ -54,6 +53,7 @@ public class CovidFragment extends Fragment {
         totalCases=view.findViewById(R.id.totalCases);
         stateNameText=view.findViewById(R.id.stateName);
         listView=view.findViewById(R.id.listView);
+        loading = view.findViewById(R.id.loading_screen);
         districtList=new ArrayList<>();
         stateNameText.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -78,6 +78,14 @@ public class CovidFragment extends Fragment {
 
         });
         return view;
+    }
+
+    public void showLoading(){
+       loading.setVisibility(View.VISIBLE);
+    }
+
+    public void hideLoading(){
+        loading.setVisibility(View.GONE);
     }
 
     @Override
@@ -141,11 +149,13 @@ public class CovidFragment extends Fragment {
     }
 
     private void updateUI(String getState) {
+        showLoading();
         api = RetrofitClient.getInstance().getApi();
         Call<List<CovidStateData>> call = api.getAllCovidData();
         call.enqueue(new Callback<List<CovidStateData>>() {
             @Override
             public void onResponse(Call<List<CovidStateData>> call, Response<List<CovidStateData>> response) {
+                hideLoading();
                 List<CovidStateData> dataList=response.body();
                 for(CovidStateData data:dataList) {
 

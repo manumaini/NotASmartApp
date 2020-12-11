@@ -63,7 +63,6 @@ public class CsvHelper {
                 return false;
             }
 
-
         }
 
         return true;

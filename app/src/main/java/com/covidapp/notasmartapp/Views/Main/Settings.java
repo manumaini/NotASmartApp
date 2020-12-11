@@ -68,26 +68,19 @@ public class Settings extends Fragment {
         return view;
     }
 
-    private void setLocale(String lang){
+    void setLocale(String lang){
         locale=new Locale(lang);
         locale.setDefault(locale);
         Configuration conf=new Configuration();
         conf.locale=locale;
         getContext().getResources().updateConfiguration(conf,getContext().getResources().getDisplayMetrics());
-        SharedPreferences.Editor editor=getActivity().getSharedPreferences("Settings", Context.MODE_PRIVATE).edit();
+        SharedPreferences.Editor editor=getContext().getSharedPreferences("Settings", Context.MODE_PRIVATE).edit();
         editor.putString("lang",lang);
         editor.apply();
-    }
-
-    private void loadLocale(){
-        SharedPreferences prefs=getActivity().getSharedPreferences("Settings",Context.MODE_PRIVATE);
-        String languageChosen=prefs.getString("lang","");
-        setLocale(languageChosen);
     }
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        loadLocale();
     }
 }

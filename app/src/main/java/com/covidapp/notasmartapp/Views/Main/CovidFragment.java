@@ -99,7 +99,7 @@ public class CovidFragment extends Fragment {
                     int deaths = data.deaths;
                     int confirmed = data.confirmedCases;
                     ArrayList<PieEntry> pieEntries = new ArrayList<>();
-                    totalCases.setText("Total: "+confirmed);
+                    totalCases.setText(getActivity().getResources().getString(R.string.Total)+" : "+confirmed);
 
                     pieEntries.add(new PieEntry(activeCase,"Active"));
                     pieEntries.add(new PieEntry(recoveredCase,"Recovered"));
@@ -158,7 +158,7 @@ public class CovidFragment extends Fragment {
                         int deaths = data.deaths;
                         int confirmed = data.confirmedCases;
                         ArrayList<PieEntry> pieEntries = new ArrayList<>();
-                        totalCases.setText(R.string.Total + confirmed);
+                        totalCases.setText(getActivity().getResources().getString(R.string.Total)+" : " + confirmed);
 
                         pieEntries.add(new PieEntry(activeCase, "Active"));
                         pieEntries.add(new PieEntry(recoveredCase, "Recovered"));
@@ -190,7 +190,6 @@ public class CovidFragment extends Fragment {
                         districtDataAdapter=new DistrictDataAdapter(getContext(),districtList);
                         listView.setAdapter(districtDataAdapter);
                         return;
-
                     }
                 }
             }

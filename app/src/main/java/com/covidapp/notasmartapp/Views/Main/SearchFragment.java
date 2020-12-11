@@ -97,7 +97,6 @@ public class SearchFragment extends Fragment implements MainContract.SearchView 
     @Override
     public void showLoading() {
         loading.setVisibility(View.VISIBLE);
-
     }
 
     @Override

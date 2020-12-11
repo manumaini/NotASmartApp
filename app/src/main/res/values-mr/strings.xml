@@ -13,43 +13,46 @@
     <string name="Hospital">रुग्णालये</string>
 
     <string-array name="choose_state">
-        <item>Maharashtra</item>
-        <item>Tamil Nadu</item>
-        <item>Karnataka</item>
-        <item>Punjab</item>
-        <item>Gujarat</item>
-        <item>Kerala</item>
-        <item>Uttar Pradesh</item>
-        <item>West Bengal</item>
-        <item>Odisha</item>
-        <item>Andhra Pradesh</item>
-        <item>Delhi</item>
-        <item>Telangana</item>
-        <item>Rajasthan</item>
-        <item>Haryana</item>
-        <item>Chhattisgarh</item>
-        <item>Assam</item>
-        <item>Madhya Pradesh</item>
-        <item>Jammu and Kashmir</item>
-        <item>Uttarakhand</item>
-        <item>Goa</item>
-        <item>Jharkhand</item>
-        <item>Himachal Pradesh</item>
-        <item>Puducherry</item>
-        <item>Tripura</item>
-        <item>Manipur</item>
-        <item>Chandigarh</item>
-        <item>Arunachal Pradesh</item>
-        <item>Meghalaya</item>
-        <item>Nagaland</item>
-        <item>Ladakh</item>
-        <item>Sikkim</item>
-        <item>Andaman and Nicobar Islands</item>
-        <item>Mizoram</item>
-        <item>Daman and Diu</item>
-        <item>Dadra and Nagar Haveli</item>
-        <item>Lakshadweep</item>
+        <item>महाराष्ट्र</item>
+        <item>तामिळनाडू</item>
+        <item>कर्नाटक</item>
+        <item>पंजाब</item>
+        <item>गुजरात</item>
+        <item>केरळा</item>
+        <item>उत्तर प्रदेश</item>
+        <item>पश्चिम बंगाल</item>
+        <item>ओडिशा</item>
+        <item>आंध्र प्रदेश</item>
+        <item>दिल्ली</item>
+        <item>तेलंगणा</item>
+        <item>राजस्थान</item>
+        <item>हरियाणा</item>
+        <item>छत्तीसगड</item>
+        <item>आसाम</item>
+        <item>मध्य प्रदेश</item>
+        <item>जम्मू-काश्मीर</item>
+        <item>उत्तराखंड</item>
+        <item>गोवा</item>
+        <item>झारखंड</item>
+        <item>हिमाचल प्रदेश</item>
+        <item>पुडुचेरी</item>
+        <item>त्रिपुरा</item>
+        <item>मणिपूर</item>
+        <item>चंदीगड</item>
+        <item>अरुणाचल प्रदेश</item>
+        <item>मेघालय</item>
+        <item>नागालँड</item>
+        <item>लडाख</item>
+        <item>सिक्किम</item>
+        <item>अंदमान निकोबार बेटे</item>
+        <item>मिझोरम</item>
+        <item>दमण आणि दीव</item>
+        <item>दादरा आणि नगर हवेली</item>
+        <item>लक्षद्वीप</item>
     </string-array>
+
+    <string name="choose_a_state">राज्य निवडा</string>
+    <string name="choose_lang">एक भाषा निवडा</string>
 
     <string name="analysis_line">शहर व जिल्ह्यांचे विश्लेषण</string>
     <string name="call_ambulance">म्ब्युलन्सला कॉल कराce</string>

@@ -13,43 +13,46 @@
     <string name="Hospital">હોસ્પિટલો</string>
 
     <string-array name="choose_state">
-        <item>Maharashtra</item>
-        <item>Tamil Nadu</item>
-        <item>Karnataka</item>
-        <item>Punjab</item>
-        <item>Gujarat</item>
-        <item>Kerala</item>
-        <item>Uttar Pradesh</item>
-        <item>West Bengal</item>
-        <item>Odisha</item>
-        <item>Andhra Pradesh</item>
-        <item>Delhi</item>
-        <item>Telangana</item>
-        <item>Rajasthan</item>
-        <item>Haryana</item>
-        <item>Chhattisgarh</item>
-        <item>Assam</item>
-        <item>Madhya Pradesh</item>
-        <item>Jammu and Kashmir</item>
-        <item>Uttarakhand</item>
-        <item>Goa</item>
-        <item>Jharkhand</item>
-        <item>Himachal Pradesh</item>
-        <item>Puducherry</item>
-        <item>Tripura</item>
-        <item>Manipur</item>
-        <item>Chandigarh</item>
-        <item>Arunachal Pradesh</item>
-        <item>Meghalaya</item>
-        <item>Nagaland</item>
-        <item>Ladakh</item>
-        <item>Sikkim</item>
-        <item>Andaman and Nicobar Islands</item>
-        <item>Mizoram</item>
-        <item>Daman and Diu</item>
-        <item>Dadra and Nagar Haveli</item>
-        <item>Lakshadweep</item>
+        <item>મહારાષ્ટ્ર</item>
+        <item>તામિલનાડુ</item>
+        <item>કર્ણાટક</item>
+        <item>પંજાબ</item>
+        <item>ગુજરાત</item>
+        <item>કેરળ</item>
+        <item>ઉત્તરપ્રદેશ</item>
+        <item>પશ્ચિમ બંગાળ</item>
+        <item>ઓડિશા</item>
+        <item>આંધ્રપ્રદેશ</item>
+        <item>દિલ્હી</item>
+        <item>તેલંગાણા</item>
+        <item>રાજસ્થાન</item>
+        <item>હરિયાણા</item>
+        <item>છત્તીસગ.</item>
+        <item>આસામ</item>
+        <item>મધ્યપ્રદેશ</item>
+        <item>જમ્મુ કાશ્મીર</item>
+        <item>ઉત્તરાખંડ</item>
+        <item>ગોવા</item>
+        <item>ઝારખંડ</item>
+        <item>હિમાચલ પ્રદેશ</item>
+        <item>પુડ્ડુચેરી</item>
+        <item>ત્રિપુરા</item>
+        <item>મણિપુર</item>
+        <item>ચંદીગ.</item>
+        <item>અરુણાચલ પ્રદેશ</item>
+        <item>મેઘાલય</item>
+        <item>નાગાલેન્ડ</item>
+        <item>લદાખ</item>
+        <item>સિક્કિમ</item>
+        <item>આંદામાન અને નિકોબાર આઇલેન્ડ્સ</item>
+        <item>મિઝોરમ</item>
+        <item>દમણ અને દીવ</item>
+        <item>દાદરા અને નગર હવેલી</item>
+        <item>લક્ષદ્વીપ</item>
     </string-array>
+
+    <string name="choose_a_state">રાજ્ય પસંદ કરો</string>
+    <string name="choose_lang">કોઈ ભાષા પસંદ કરો</string>
 
     <string name="analysis_line">શહેર અને જિલ્લાઓનું વિશ્લેષણ"</string>
     <string name="call_ambulance">એમ્બ્યુલન્સને બોલાવો</string>

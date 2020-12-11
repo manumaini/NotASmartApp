@@ -44,6 +44,12 @@ public class CovidFragment extends Fragment {
     private ArrayList<CovidStateData.CovidDistrictData> districtList;
     private DistrictDataAdapter districtDataAdapter;
     private RelativeLayout loading;
+    private String[] states={"Maharashtra","Tamil Nadu","Karnataka","Punjab","Gujarat","Kerala","Uttar Pradesh",
+                             "West Bengal","Odisha","Andhra Pradesh","Delhi","Telangana","Rajasthan","Haryana","Chhattisgarh",
+                             "Assam","Madhya Pradesh","Jammu and Kashmir","Uttarakhand","Goa","Jharkhand","Himachal Pradesh",
+                             "Puducherry","Tripura","Manipur","Chandigarh","Arunachal Pradesh","Meghalaya","Nagaland",
+                             "Ladakh","Sikkim","Andaman and Nicobar Islands","Mizoram","Daman and Diu","Dadra and Nagar Haveli",
+                             "Lakshadweep"};
 
     @Nullable
     @Override
@@ -55,19 +61,18 @@ public class CovidFragment extends Fragment {
         listView=view.findViewById(R.id.listView);
         loading = view.findViewById(R.id.loading_screen);
         districtList=new ArrayList<>();
-        loadData();
         stateNameText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 AlertDialog.Builder builder=new AlertDialog.Builder(getActivity());
                 String[] list=getActivity().getResources().getStringArray(R.array.choose_state);
-                builder.setTitle("Choose a State")
+                builder.setTitle(getActivity().getResources().getString(R.string.choose_a_state)+"...")
                         .setSingleChoiceItems(list, position, new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int i) {
                                 position=i;
                                 stateNameText.setText(list[position]);
-                                getState=(list[position]);
+                                getState=(states[position]);
                                 updateUI(getState);
                                 dialog.cancel();
                             }
@@ -150,7 +155,6 @@ public class CovidFragment extends Fragment {
 
             }
         }));
-
     }
 
     private void updateUI(String getState) {

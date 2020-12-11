@@ -24,6 +24,7 @@ public class Settings extends Fragment {
 
     private Button languageChange;
     private Locale locale;
+    private int position=0;
 
     @Nullable
     @Override
@@ -35,25 +36,29 @@ public class Settings extends Fragment {
             public void onClick(View v) {
                 String[] select = {"English", "हिंदी", "मराठी", "ગુજરાતી"};
                 AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-                builder.setTitle("Choose a Language");
+                builder.setTitle(getActivity().getResources().getString(R.string.choose_lang)+" ");
                 String chosen;
-                builder.setSingleChoiceItems(select, -1, new DialogInterface.OnClickListener() {
+                builder.setSingleChoiceItems(select, position, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         switch (which) {
                             case 0:
+                                position=which;
                                 setLocale("en");
                                 getActivity().recreate();
                                 break;
                             case 1:
+                                position=which;
                                 setLocale("hi");
                                 getActivity().recreate();
                                 break;
                             case 2:
+                                position=which;
                                 setLocale("mr");
                                 getActivity().recreate();
                                 break;
                             case 3:
+                                position=which;
                                 setLocale("gu");
                                 getActivity().recreate();
                                 break;
@@ -68,15 +73,33 @@ public class Settings extends Fragment {
         return view;
     }
 
-    void setLocale(String lang){
+    private void setLocale(String lang){
         locale=new Locale(lang);
         locale.setDefault(locale);
         Configuration conf=new Configuration();
         conf.locale=locale;
         getContext().getResources().updateConfiguration(conf,getContext().getResources().getDisplayMetrics());
-        SharedPreferences.Editor editor=getContext().getSharedPreferences("Settings", Context.MODE_PRIVATE).edit();
+        SharedPreferences.Editor editor=this.getContext().getSharedPreferences("Settings", Context.MODE_PRIVATE).edit();
         editor.putString("lang",lang);
         editor.apply();
+    }
+
+    public int loadLocale(){
+        SharedPreferences prefs=this.getContext().getSharedPreferences("Settings",Context.MODE_PRIVATE);
+        String language=prefs.getString("lang","");
+        setLocale(language);
+        switch(language){
+            case "en":
+                return 0;
+            case "hi":
+                return 1;
+            case "mr":
+                return 2;
+            case "gu":
+                return 3;
+            default:
+                return -1;
+        }
     }
 
     @Override

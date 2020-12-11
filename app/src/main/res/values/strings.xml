@@ -50,9 +50,10 @@
         <item>Lakshadweep</item>
     </string-array>
 
+    <string name="choose_a_state">Choose a State</string>
+    <string name="choose_lang">Choose a Language</string>
+
     <string name="analysis_line">Analysis of City and Districts"</string>
     <string name="call_ambulance">Call Ambulance</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">NotASmartApp</string>
-    <string name="sign_up">Don\'t have an account ? <u>Sign Up</u></string>
+    <string name="sign_up">તમારું ખાતું નથી? <u>સાઇન અપ કરો</u></string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="Health_News">Health News</string>
-    <string name="Covid_News">Covid News</string>
-    <string name="Find_Hospitals">Find Hospitals</string>
-    <string name="Settings">Settings</string>
-    <string name="Search">Search</string>
-    <string name="Total">Total</string>
-    <string name="Hospital">Hospitals</string>
+    <string name="Health_News">આરોગ્ય સમાચાર</string>
+    <string name="Covid_News">કોવિડ સંબંધી સમાચાર</string>
+    <string name="Find_Hospitals">હોસ્પિટલો શોધો</string>
+    <string name="Settings">સેટિંગ્સ</string>
+    <string name="Search">શોધો</string>
+    <string name="Total">કુલ</string>
+    <string name="Hospital">હોસ્પિટલો</string>
 
     <string-array name="choose_state">
         <item>Maharashtra</item>
@@ -51,6 +51,6 @@
         <item>Lakshadweep</item>
     </string-array>
 
-    <string name="analysis_line">Analysis of City and Districts"</string>
-    <string name="call_ambulance">Call Ambulance</string>
+    <string name="analysis_line">શહેર અને જિલ્લાઓનું વિશ્લેષણ"</string>
+    <string name="call_ambulance">એમ્બ્યુલન્સને બોલાવો</string>
 </resources>

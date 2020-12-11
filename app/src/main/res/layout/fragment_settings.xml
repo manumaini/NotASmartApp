@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Views.Main.Settings">
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:text="Language"
+        android:id="@+id/languageChange"
+        android:drawableLeft="@drawable/ic_baseline_language_24"
+        android:paddingLeft="90dp"
+        android:paddingRight="90dp"
+        android:background="@drawable/button_background"
+        android:layout_margin="12dp"
+        android:textColor="@color/colorWhite"
+        android:textStyle="bold"/>
+
+</RelativeLayout>

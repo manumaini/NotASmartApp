@@ -66,7 +66,7 @@ public class CovidFragment extends Fragment {
                             public void onClick(DialogInterface dialog, int i) {
                                 position=i;
                                 stateNameText.setText(list[position]);
-                                getState=list[position];
+                                getState=(list[position]);
                                 updateUI(getState);
                                 dialog.cancel();
                             }
@@ -75,6 +75,7 @@ public class CovidFragment extends Fragment {
                 dialog.setCancelable(true);
                 dialog.show();
             }
+
         });
         return view;
     }
@@ -157,7 +158,7 @@ public class CovidFragment extends Fragment {
                         int deaths = data.deaths;
                         int confirmed = data.confirmedCases;
                         ArrayList<PieEntry> pieEntries = new ArrayList<>();
-                        totalCases.setText("Total: " + confirmed);
+                        totalCases.setText(R.string.Total + confirmed);
 
                         pieEntries.add(new PieEntry(activeCase, "Active"));
                         pieEntries.add(new PieEntry(recoveredCase, "Recovered"));

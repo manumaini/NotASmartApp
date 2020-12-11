@@ -7,6 +7,9 @@
     <string name="Covid_News">Covid News</string>
     <string name="Find_Hospitals">Find Hospitals</string>
     <string name="Settings">Settings</string>
+    <string name="Search">Search</string>
+    <string name="Total">Total</string>
+    <string name="Hospital">Hospitals</string>
 
     <string-array name="choose_state">
         <item>Maharashtra</item>
@@ -49,5 +52,7 @@
 
     <string name="analysis_line">Analysis of City and Districts"</string>
     <string name="call_ambulance">Call Ambulance</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

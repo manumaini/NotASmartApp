@@ -7,6 +7,9 @@
     <string name="Covid_News">कोविड खबरें</string>
     <string name="Find_Hospitals">अस्पतालों का पता लगाएं</string>
     <string name="Settings">समायोजन</string>
+    <string name="Search">શોધો</string>
+    <string name="Total">कुल</string>
+    <string name="Hospital">अस्पताल</string>
 
     <string-array name="choose_state">
         <item>महाराष्ट्र</item>

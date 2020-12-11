@@ -82,25 +82,31 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             case R.id.menu_healthNews:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new HealthNewsFragment(this)).commit();
                 navigationView.setCheckedItem(R.id.menu_healthNews);
-                toolbar.setTitle("Health News");
+                toolbar.setTitle(R.string.Health_News);
                 break;
 
             case R.id.menu_covidNews:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new CovidFragment()).commit();
                 navigationView.setCheckedItem(R.id.menu_covidNews);
-                toolbar.setTitle("Co-vid News");
+                toolbar.setTitle(R.string.Covid_News);
                 break;
 
             case R.id.menu_hospitals:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new MapFragment()).commit();
                 navigationView.setCheckedItem(R.id.menu_hospitals);
-                toolbar.setTitle("Hospitals");
+                toolbar.setTitle(R.string.Hospital);
                 break;
 
             case R.id.menu_search:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new SearchFragment()).commit();
                 navigationView.setCheckedItem(R.id.menu_search);
-                toolbar.setTitle("Search");
+                toolbar.setTitle(R.string.Search);
+                break;
+
+            case R.id.menu_settings:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new Settings()).commit();
+                navigationView.setCheckedItem(R.id.menu_settings);
+                toolbar.setTitle(R.string.Settings);
                 break;
 
 

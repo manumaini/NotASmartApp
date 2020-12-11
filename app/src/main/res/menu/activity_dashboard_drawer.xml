@@ -6,27 +6,27 @@
             android:id="@+id/menu_healthNews"
             android:icon="@drawable/ic_hospital_user_solid"
             android:iconTint="@color/colorAccent"
-            android:title="Health News" />
+            android:title="@string/Health_News" />
 
         <item
             android:id="@+id/menu_covidNews"
             android:icon="@drawable/ic_virus_solid"
             android:iconTint="@color/colorAccent"
-            android:title="Covid News" />
+            android:title="@string/Covid_News" />
 
         <item
             android:id="@+id/menu_hospitals"
             android:icon="@drawable/ic_map"
             android:iconTint="@color/colorAccent"
-            android:title="Find Hospitals" />
+            android:title="@string/Find_Hospitals" />
 
         <item
             android:id="@+id/menu_search"
             android:icon="@drawable/ic_search"
             android:iconTint="@color/colorAccent"
-            android:title="Search" />
+            android:title="@string/Search" />
         <item
-            android:id="@+id/settings"
+            android:id="@+id/menu_settings"
             android:icon="@drawable/ic_baseline_settings_24"
             android:iconTint="@color/colorAccent"
             android:title="@string/Settings" />

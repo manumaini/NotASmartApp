@@ -55,6 +55,7 @@ public class CovidFragment extends Fragment {
         listView=view.findViewById(R.id.listView);
         loading = view.findViewById(R.id.loading_screen);
         districtList=new ArrayList<>();
+        loadData();
         stateNameText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -88,9 +89,11 @@ public class CovidFragment extends Fragment {
         loading.setVisibility(View.GONE);
     }
 
-    @Override
-    public void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+
+
+
+    public void loadData(){
+        showLoading();
         api=RetrofitClient.getInstance().getApi();
         Call<List<CovidStateData>> call=api.getAllCovidData();
         call.enqueue((new Callback<List<CovidStateData>>() {
@@ -98,6 +101,7 @@ public class CovidFragment extends Fragment {
             public void onResponse(Call<List<CovidStateData>> call, Response<List<CovidStateData>> response) {
                 List<CovidStateData> dataList=response.body();
                 for(CovidStateData data:dataList){
+                    hideLoading();
 
                     String stateName=data.state;
                     stateNameText.setText(stateName);
@@ -146,6 +150,7 @@ public class CovidFragment extends Fragment {
 
             }
         }));
+
     }
 
     private void updateUI(String getState) {

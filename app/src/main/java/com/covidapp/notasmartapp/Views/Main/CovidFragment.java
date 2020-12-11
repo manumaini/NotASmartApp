@@ -61,6 +61,7 @@ public class CovidFragment extends Fragment {
         listView=view.findViewById(R.id.listView);
         loading = view.findViewById(R.id.loading_screen);
         districtList=new ArrayList<>();
+        loadData();
         stateNameText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -102,6 +102,7 @@ public class CovidFragment extends Fragment {
         showLoading();
         api=RetrofitClient.getInstance().getApi();
         Call<List<CovidStateData>> call=api.getAllCovidData();
+        String[] list=getActivity().getResources().getStringArray(R.array.choose_state);
         call.enqueue((new Callback<List<CovidStateData>>() {
             @Override
             public void onResponse(Call<List<CovidStateData>> call, Response<List<CovidStateData>> response) {
@@ -110,7 +111,7 @@ public class CovidFragment extends Fragment {
                     hideLoading();
 
                     String stateName=data.state;
-                    stateNameText.setText(stateName);
+                    stateNameText.setText(list[0]);
 
                     int activeCase = data.activeCases;
                     int recoveredCase = data.recoveredCases;
@@ -171,7 +172,6 @@ public class CovidFragment extends Fragment {
 
                     if(data.state.equals(getState)) {
                         String stateName = data.state;
-                        stateNameText.setText(stateName);
 
                         int activeCase = data.activeCases;
                         int recoveredCase = data.recoveredCases;

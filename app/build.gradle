@@ -72,4 +72,8 @@ dependencies {
 
     //location google play services
     implementation 'com.google.android.gms:play-services-location:17.1.0'
+
+    def lottieVersion = "3.6.0"
+    implementation "com.airbnb.android:lottie:$lottieVersion"
+
 }

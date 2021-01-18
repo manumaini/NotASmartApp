@@ -2,44 +2,38 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.covidapp.notasmartapp">
 
-     <uses-permission android:name="android.permission.INTERNET"/>
-     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-     <uses-permission android:name="android.permission.CALL_PHONE"/>
-
-
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
 
     <meta-data
         android:name="com.google.android.gms.version"
         android:value="@integer/google_play_services_version" />
-
     <meta-data
         android:name="com.google.android.geo.API_KEY"
-        android:value="AIzaSyBFz0MT0ZP8Ka7NQwwG6nQewRJ9NZPs_MM">
-    </meta-data>
+        android:value="AIzaSyBFz0MT0ZP8Ka7NQwwG6nQewRJ9NZPs_MM"></meta-data>
 
     <application
-        android:usesCleartextTraffic="true"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".Views.VerificationActivity"></activity>
 
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
-
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyBFz0MT0ZP8Ka7NQwwG6nQewRJ9NZPs_MM">
-        </meta-data>
-        <activity android:name=".Views.RegistrationActivity"></activity>
-        <activity android:name=".Views.WebActivity"> </activity>
-        <activity android:name=".Views.LoginActivity" >
+            android:value="AIzaSyBFz0MT0ZP8Ka7NQwwG6nQewRJ9NZPs_MM"></meta-data>
 
-        </activity>
+        <activity android:name=".Views.RegistrationActivity" />
+        <activity android:name=".Views.WebActivity"></activity>
+        <activity android:name=".Views.LoginActivity"></activity>
         <activity android:name=".Views.Main.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

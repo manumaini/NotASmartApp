@@ -13,7 +13,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.covidapp.notasmartapp.Interfaces.MainContract;
 import com.covidapp.notasmartapp.Presenters.RegistrationPresenter;
 import com.covidapp.notasmartapp.R;
-import com.covidapp.notasmartapp.Views.Main.MainActivity;
 import com.google.firebase.auth.FirebaseUser;
 import com.thekhaeng.pushdownanim.PushDownAnim;
 
@@ -47,7 +46,7 @@ public class RegistrationActivity extends AppCompatActivity implements MainContr
     @Override
     public void onSuccess(FirebaseUser user) {
         Toast.makeText(this, user.getEmail() + "registered", Toast.LENGTH_LONG).show();
-        Intent intent = new Intent(RegistrationActivity.this, MainActivity.class);
+        Intent intent = new Intent(RegistrationActivity.this, VerificationActivity.class);
         intent.putExtra("user_email", user.getEmail());
         startActivity(intent);
     }

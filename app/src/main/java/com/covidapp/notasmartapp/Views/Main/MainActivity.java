@@ -1,9 +1,7 @@
 package com.covidapp.notasmartapp.Views.Main;
 
 import android.Manifest;
-import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
@@ -23,6 +21,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.covidapp.notasmartapp.R;
 import com.covidapp.notasmartapp.Views.LoginActivity;
+import com.covidapp.notasmartapp.Views.RegistrationActivity;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -74,6 +73,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         if(user == null){
             startActivity(new Intent(MainActivity.this, LoginActivity.class));
+        }
+        if(!user.isEmailVerified()){
+            startActivity(new Intent(MainActivity.this, RegistrationActivity.class));
         }
         user_email.setText(user.getEmail());
     }

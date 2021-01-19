@@ -71,7 +71,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         user = mAuth.getCurrentUser();
         TextView user_email = navigationView.getHeaderView(0).findViewById(R.id.menu_email);
 
-        if(user != null){
+        if(user == null){
             startActivity(new Intent(MainActivity.this, LoginActivity.class));
         }
         else if(!user.isEmailVerified()){
@@ -136,13 +136,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         switch(requestCode){
             case REQUEST_CALL_CODE:
                 if(grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED){
-                    callAmbulance();
+
                 }else{
                     Toast.makeText(MainActivity.this,"Permission Required",Toast.LENGTH_LONG).show();
                 }
                 break;
-
-
         }
     }
 

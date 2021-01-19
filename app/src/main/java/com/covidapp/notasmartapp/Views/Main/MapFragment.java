@@ -128,7 +128,6 @@ public class MapFragment extends Fragment implements MainContract.MapView {
             MarkerOptions options = new MarkerOptions().position(latLng).title(result.getName()).icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN));
             map.addMarker(options);
             builder.include(latLng);
-
         }
         LatLngBounds bounds = builder.build();
         CameraUpdate cu = CameraUpdateFactory.newLatLngBounds(bounds, 25, 25, 1);

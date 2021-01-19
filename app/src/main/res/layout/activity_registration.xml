@@ -8,7 +8,7 @@
 
     <TextView
         android:textStyle="bold"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="12dp"
         android:layout_centerHorizontal="true"
         android:textSize="36sp"
         android:textColor="@color/colorDarkGrey"
@@ -17,7 +17,7 @@
         android:layout_height="wrap_content"/>
 
     <ImageView
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="60dp"
         android:layout_centerHorizontal="true"
         android:src="@drawable/ic_secure_login"
         android:id="@+id/secureLogin"
@@ -25,7 +25,7 @@
         android:layout_height="wrap_content"/>
 
     <TextView
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="18dp"
         android:id="@+id/phone_label"
         android:layout_marginHorizontal="24dp"
         android:layout_below="@id/secureLogin"
@@ -40,7 +40,7 @@
         android:paddingHorizontal="16dp"
         android:textColor="@color/colorBlack"
         android:id="@+id/registration_phone"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="2dp"
         android:layout_below="@id/phone_label"
         android:layout_marginHorizontal="16dp"
         android:background="@drawable/textfield_backgrouond"
@@ -48,7 +48,7 @@
         android:layout_height="50dp"/>
 
     <TextView
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:id="@+id/email_label"
         android:layout_marginHorizontal="24dp"
         android:layout_below="@id/registration_phone"
@@ -62,7 +62,7 @@
         android:paddingHorizontal="16dp"
         android:textColor="@color/colorBlack"
         android:id="@+id/registration_email"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="2dp"
         android:layout_below="@id/email_label"
         android:layout_marginHorizontal="16dp"
         android:background="@drawable/textfield_backgrouond"
@@ -70,7 +70,7 @@
         android:layout_height="50dp"/>
 
     <TextView
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:id="@+id/password_label"
         android:layout_marginHorizontal="24dp"
         android:layout_below="@id/registration_email"
@@ -84,7 +84,7 @@
         android:paddingHorizontal="16dp"
         android:textColor="@color/colorBlack"
         android:id="@+id/registration_password"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="2dp"
         android:layout_below="@id/password_label"
         android:layout_marginHorizontal="16dp"
         android:background="@drawable/textfield_backgrouond"
@@ -96,11 +96,32 @@
         android:text="SignUp"
         android:layout_marginHorizontal="16dp"
         android:id="@+id/registerButton"
-        android:layout_marginTop="54dp"
+        android:layout_marginTop="16dp"
         android:layout_below="@id/registration_password"
         android:background="@drawable/button_background"
         android:layout_width="match_parent"
         android:layout_height="50dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/registerButton"
+        android:text="OR"
+        android:layout_marginTop="8dp"
+        android:textSize="20dp"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/colorAccent"
+        android:id="@+id/textOR"/>
+
+    <com.google.android.gms.common.SignInButton
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="4dp"
+        android:layout_below="@+id/textOR"
+        android:background="@color/colorRed"
+        android:layout_marginHorizontal="16dp"
+        android:id="@+id/googleSignUpButton" />
+
 
     <RelativeLayout
         android:id="@+id/loading_screen"

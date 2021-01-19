@@ -71,10 +71,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         user = mAuth.getCurrentUser();
         TextView user_email = navigationView.getHeaderView(0).findViewById(R.id.menu_email);
 
-        if(user == null){
+        if(user != null){
             startActivity(new Intent(MainActivity.this, LoginActivity.class));
         }
-        if(!user.isEmailVerified()){
+        else if(!user.isEmailVerified()){
             startActivity(new Intent(MainActivity.this, RegistrationActivity.class));
         }
         user_email.setText(user.getEmail());

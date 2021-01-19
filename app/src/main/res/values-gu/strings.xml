@@ -53,6 +53,7 @@
 
     <string name="choose_a_state">રાજ્ય પસંદ કરો</string>
     <string name="choose_lang">કોઈ ભાષા પસંદ કરો</string>
+    <string name="or_text">અથવા</string>
 
     <string name="analysis_line">શહેર અને જિલ્લાઓનું વિશ્લેષણ"</string>
     <string name="call_ambulance">એમ્બ્યુલન્સને બોલાવો</string>

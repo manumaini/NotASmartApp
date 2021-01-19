@@ -53,7 +53,8 @@
 
     <string name="choose_a_state">राज्य निवडा</string>
     <string name="choose_lang">एक भाषा निवडा</string>
+    <string name="or_text">किंवा</string>
 
     <string name="analysis_line">शहर व जिल्ह्यांचे विश्लेषण</string>
-    <string name="call_ambulance">म्ब्युलन्सला कॉल कराce</string>
+    <string name="call_ambulance">म्ब्युलन्सला कॉल करा</string>
 </resources>

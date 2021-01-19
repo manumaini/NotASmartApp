@@ -52,6 +52,7 @@
 
     <string name="choose_a_state">एक राज्य चुनें</string>
     <string name="choose_lang">भाषा चुनें</string>
+    <string name="or_text">या</string>
 
     <string name="analysis_line">शहर और जिलों का विश्लेषण"</string>
     <string name="call_ambulance">एम्बुलेंस को बुलाओ</string>

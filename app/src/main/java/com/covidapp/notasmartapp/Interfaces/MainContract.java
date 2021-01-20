@@ -12,6 +12,7 @@ import java.util.List;
 public interface MainContract {
 
     interface RegistrationView{
+        void googleSignin(FirebaseUser user);
         void onSuccess(FirebaseUser user);
         void onFailed(String error);
         void showLoading();

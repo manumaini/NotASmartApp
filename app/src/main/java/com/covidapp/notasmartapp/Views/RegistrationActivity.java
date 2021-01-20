@@ -15,6 +15,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.covidapp.notasmartapp.Interfaces.MainContract;
 import com.covidapp.notasmartapp.Presenters.RegistrationPresenter;
 import com.covidapp.notasmartapp.R;
+import com.covidapp.notasmartapp.Views.Main.MainActivity;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
@@ -70,6 +71,14 @@ public class RegistrationActivity extends AppCompatActivity implements MainContr
     }
 
     @Override
+    public void googleSignin(FirebaseUser user) {
+        Toast.makeText(this, user.getEmail() + "registered", Toast.LENGTH_LONG).show();
+        Intent intent = new Intent(RegistrationActivity.this, MainActivity.class);
+        intent.putExtra("user_email", user.getEmail());
+        startActivity(intent);
+    }
+
+    @Override
     public void onSuccess(FirebaseUser user) {
         Toast.makeText(this, user.getEmail() + "registered", Toast.LENGTH_LONG).show();
         Intent intent = new Intent(RegistrationActivity.this, VerificationActivity.class);
@@ -111,6 +120,7 @@ public class RegistrationActivity extends AppCompatActivity implements MainContr
     }
 
     private void signIn(){
+        googleSignInClient.signOut();
         Intent signInIntent = googleSignInClient.getSignInIntent();
         startActivityForResult(signInIntent, RC_SIGN_IN);
     }

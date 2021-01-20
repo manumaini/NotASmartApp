@@ -3,33 +3,42 @@ package com.covidapp.notasmartapp.Views.Main;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.os.Bundle;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+
 import com.covidapp.notasmartapp.R;
+import com.covidapp.notasmartapp.Views.LoginActivity;
+import com.google.firebase.auth.FirebaseAuth;
+import com.thekhaeng.pushdownanim.PushDownAnim;
 
 import java.util.Locale;
 
-public class Settings extends Fragment {
+public class Settings extends Fragment implements View.OnClickListener {
 
     private Button languageChange;
     private Locale locale;
+    private Button signOut;
+
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view =inflater.inflate(R.layout.fragment_settings,container,false);
         languageChange=view.findViewById(R.id.languageChange);
+        signOut = view.findViewById(R.id.Settings_logout);
+
+
+        PushDownAnim.setPushDownAnimTo(signOut).setOnClickListener(this);
         languageChange.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -99,5 +108,17 @@ public class Settings extends Fragment {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+    }
+
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()){
+            case R.id.Settings_logout:
+                FirebaseAuth.getInstance().signOut();
+                Intent intent = new Intent(getContext(), LoginActivity.class);
+                startActivity(intent);
+                break;
+        }
+
     }
 }

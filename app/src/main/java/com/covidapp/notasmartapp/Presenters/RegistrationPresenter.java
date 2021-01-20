@@ -1,14 +1,12 @@
 package com.covidapp.notasmartapp.Presenters;
 
 import android.content.Context;
-import android.content.Intent;
 import android.util.Log;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 
 import com.covidapp.notasmartapp.Interfaces.MainContract;
-import com.covidapp.notasmartapp.Views.RegistrationActivity;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -75,7 +73,7 @@ public class RegistrationPresenter implements MainContract.RegistrationPresenter
                         if (task.isSuccessful()) {
                             Log.d("Google", "signInWithCredential:success");
                             FirebaseUser user = mAuth.getCurrentUser();
-                            view.onSuccess(user);
+                            view.googleSignin(user);
                         } else {
                             Log.w("Google", "signInWithCredential:failure", task.getException());
                             view.onFailed(task.getException().getLocalizedMessage());

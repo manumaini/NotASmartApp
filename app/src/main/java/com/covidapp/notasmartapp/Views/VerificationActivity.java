@@ -45,6 +45,24 @@ public class VerificationActivity extends AppCompatActivity implements View.OnCl
 
     }
 
+    private void start(){
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    Thread.sleep(2000);
+
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }finally {
+                    Intent intent = new Intent(VerificationActivity.this, MainActivity.class);
+                    intent.putExtra("user_email",user.getEmail());
+                    startActivity(intent);
+                }
+            }
+        }).start();
+    }
+
 
     @Override
     public void onClick(View view) {
@@ -72,10 +90,7 @@ public class VerificationActivity extends AppCompatActivity implements View.OnCl
                         if(user.isEmailVerified()){
                             animationView.setAnimation(R.raw.verified);
                             Toast.makeText(VerificationActivity.this,"Email Verified",Toast.LENGTH_LONG).show();
-                            Intent intent = new Intent(VerificationActivity.this, MainActivity.class);
-                            intent.putExtra("user_email",user.getEmail());
-                            startActivity(intent);
-
+                            start();
                         }else{
                             Toast.makeText(VerificationActivity.this,"Not Verified",Toast.LENGTH_LONG).show();
 

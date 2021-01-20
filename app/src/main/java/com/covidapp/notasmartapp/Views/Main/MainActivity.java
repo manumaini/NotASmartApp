@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
@@ -36,6 +37,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private Toolbar toolbar;
 
     private final int REQUEST_CALL_CODE=1;
+    private final String TAG = "MainActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,9 +74,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         TextView user_email = navigationView.getHeaderView(0).findViewById(R.id.menu_email);
 
         if(user == null){
+            Log.d(TAG, "onStart: in here ");
             startActivity(new Intent(MainActivity.this, LoginActivity.class));
+
         }
-        else if(!user.isEmailVerified()){
+        Log.d(TAG, "onStart: "+user.getEmail());
+        if(!user.isEmailVerified()){
             startActivity(new Intent(MainActivity.this, RegistrationActivity.class));
         }
         user_email.setText(user.getEmail());

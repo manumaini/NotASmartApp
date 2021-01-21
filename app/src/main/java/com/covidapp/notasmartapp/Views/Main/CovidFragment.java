@@ -2,10 +2,12 @@ package com.covidapp.notasmartapp.Views.Main;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -36,7 +38,7 @@ import retrofit2.Response;
 public class CovidFragment extends Fragment {
 
     private PieChart pieChart;
-    private Api api;
+    private Api api;;
     private TextView totalCases,stateNameText;
     private int position=0;
     private String getState="";
@@ -44,6 +46,7 @@ public class CovidFragment extends Fragment {
     private ArrayList<CovidStateData.CovidDistrictData> districtList;
     private DistrictDataAdapter districtDataAdapter;
     private RelativeLayout loading;
+    private ImageView dropDown;
     private String[] states={"Maharashtra","Tamil Nadu","Karnataka","Punjab","Gujarat","Kerala","Uttar Pradesh",
                              "West Bengal","Odisha","Andhra Pradesh","Delhi","Telangana","Rajasthan","Haryana","Chhattisgarh",
                              "Assam","Madhya Pradesh","Jammu and Kashmir","Uttarakhand","Goa","Jharkhand","Himachal Pradesh",
@@ -60,9 +63,10 @@ public class CovidFragment extends Fragment {
         stateNameText=view.findViewById(R.id.stateName);
         listView=view.findViewById(R.id.listView);
         loading = view.findViewById(R.id.loading_screen);
+        dropDown=view.findViewById(R.id.drop_down);
         districtList=new ArrayList<>();
         loadData();
-        stateNameText.setOnClickListener(new View.OnClickListener() {
+        dropDown.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 AlertDialog.Builder builder=new AlertDialog.Builder(getActivity());
@@ -125,7 +129,7 @@ public class CovidFragment extends Fragment {
                     pieEntries.add(new PieEntry(deaths,"Deaths"));
 
                     PieDataSet pieDataSet = new PieDataSet(pieEntries,"Analysis");
-                    pieDataSet.setColors(ColorTemplate.MATERIAL_COLORS);
+                    pieDataSet.setColors(new int[]{R.color.colorYellow,R.color.colorPrimary,R.color.colorRed},getContext());
                     pieDataSet.setSliceSpace(1f);
                     pieDataSet.setSelectionShift(3f);
                     pieDataSet.setValueTextSize(13f);
@@ -135,6 +139,7 @@ public class CovidFragment extends Fragment {
                     pieChart.setData(pieData);
                     pieChart.getDescription().setEnabled(false);
                     pieChart.setDrawHoleEnabled(false);
+                    pieChart.setRotationAngle(170);
                     pieChart.animateY(1000,Easing.EaseInCubic);
                     pieChart.setDragDecelerationFrictionCoef(0.67f);
                     pieChart.setDrawEntryLabels(false);
@@ -180,23 +185,25 @@ public class CovidFragment extends Fragment {
                         ArrayList<PieEntry> pieEntries = new ArrayList<>();
                         totalCases.setText(getActivity().getResources().getString(R.string.Total)+" : " + confirmed);
 
-                        pieEntries.add(new PieEntry(activeCase, "Active"));
-                        pieEntries.add(new PieEntry(recoveredCase, "Recovered"));
-                        pieEntries.add(new PieEntry(deaths, "Deaths"));
+                        pieEntries.add(new PieEntry(activeCase,"Active"));
+                        pieEntries.add(new PieEntry(recoveredCase,"Recovered"));
+                        pieEntries.add(new PieEntry(deaths,"Deaths"));
 
                         PieDataSet pieDataSet = new PieDataSet(pieEntries,"Analysis");
-                        pieDataSet.setColors(ColorTemplate.MATERIAL_COLORS);
+                        pieDataSet.setColors(new int[]{R.color.colorYellow,R.color.colorPrimary,R.color.colorRed},getContext());
                         pieDataSet.setSliceSpace(1f);
-                        pieDataSet.setSelectionShift(2f);
+                        pieDataSet.setSelectionShift(3f);
                         pieDataSet.setValueTextSize(13f);
 
                         PieData pieData = new PieData(pieDataSet);
 
                         pieChart.setData(pieData);
-                        pieChart.animateY(1000,Easing.EaseInCubic);
                         pieChart.getDescription().setEnabled(false);
                         pieChart.setDrawHoleEnabled(false);
+                        pieChart.setRotationAngle(170);
+                        pieChart.animateY(1000,Easing.EaseInCubic);
                         pieChart.setDragDecelerationFrictionCoef(0.67f);
+                        pieChart.setDrawEntryLabels(false);
                         pieChart.setExtraOffsets(5,10,5,5);
                         pieChart.notifyDataSetChanged();
 

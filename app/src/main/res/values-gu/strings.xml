@@ -9,7 +9,7 @@
     <string name="Find_Hospitals">હોસ્પિટલો શોધો</string>
     <string name="Settings">સેટિંગ્સ</string>
     <string name="Search">શોધો</string>
-    <string name="Total">કુલ</string>
+    <string name="Total">કુલ કેસ</string>
     <string name="Hospital">હોસ્પિટલો</string>
 
     <string-array name="choose_state">
@@ -55,6 +55,5 @@
     <string name="choose_lang">કોઈ ભાષા પસંદ કરો</string>
     <string name="or_text">અથવા</string>
 
-    <string name="analysis_line">શહેર અને જિલ્લાઓનું વિશ્લેષણ"</string>
     <string name="call_ambulance">એમ્બ્યુલન્સને બોલાવો</string>
 </resources>

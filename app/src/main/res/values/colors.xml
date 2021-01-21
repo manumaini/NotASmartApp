@@ -11,5 +11,8 @@
     <color name="colorMaroon">#CA5252</color>
     <color name="colorYellow">#F6F622</color>
     <color name="colorRed">#F61111</color>
+    <color name="colorGreyish">#F1EAEA</color>
+    <color name="colorOrange">#EC4611</color>
+
     <color name="colorStateName">#FD1414</color>
 </resources>

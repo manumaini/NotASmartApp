@@ -9,7 +9,7 @@
     <string name="Find_Hospitals">रुग्णालये शोधा</string>
     <string name="Settings">सेटिंग्ज</string>
     <string name="Search">शोधा</string>
-    <string name="Total">एकूण</string>
+    <string name="Total">एकूण प्रकरणे</string>
     <string name="Hospital">रुग्णालये</string>
 
     <string-array name="choose_state">
@@ -55,6 +55,5 @@
     <string name="choose_lang">एक भाषा निवडा</string>
     <string name="or_text">किंवा</string>
 
-    <string name="analysis_line">शहर व जिल्ह्यांचे विश्लेषण</string>
     <string name="call_ambulance">म्ब्युलन्सला कॉल करा</string>
 </resources>

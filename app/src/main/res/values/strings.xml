@@ -8,7 +8,7 @@
     <string name="Find_Hospitals">Find Hospitals</string>
     <string name="Settings">Settings</string>
     <string name="Search">Search</string>
-    <string name="Total">Total</string>
+    <string name="Total">Total Cases</string>
     <string name="Hospital">Hospitals</string>
 
     <string-array name="choose_state">
@@ -54,7 +54,6 @@
     <string name="choose_lang">Choose a Language</string>
     <string name="or_text">OR</string>
 
-    <string name="analysis_line">Analysis of City and Districts"</string>
     <string name="call_ambulance">Call Ambulance</string>
 
 </resources>

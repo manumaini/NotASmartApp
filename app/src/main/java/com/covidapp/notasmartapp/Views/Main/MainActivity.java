@@ -74,15 +74,18 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         TextView user_email = navigationView.getHeaderView(0).findViewById(R.id.menu_email);
 
         if(user == null){
-            Log.d(TAG, "onStart: in here ");
+            Log.d(TAG, "onStart: in here 1");
             startActivity(new Intent(MainActivity.this, LoginActivity.class));
-
-        }
-        Log.d(TAG, "onStart: "+user.getEmail());
-        if(!user.isEmailVerified()){
+            finish();
+        } else if(!user.isEmailVerified()){
+            Log.d(TAG, "onStart: in here 2");
             startActivity(new Intent(MainActivity.this, RegistrationActivity.class));
+            finish();
+        }else {
+            Log.d(TAG, "onStart: in here 3");
+            user_email.setText(user.getEmail());
         }
-        user_email.setText(user.getEmail());
+
     }
 
     @Override

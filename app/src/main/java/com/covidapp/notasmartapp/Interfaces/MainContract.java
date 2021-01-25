@@ -3,10 +3,12 @@ package com.covidapp.notasmartapp.Interfaces;
 import android.location.Location;
 
 import com.covidapp.notasmartapp.Data.Models.DiseaseSample;
+import com.covidapp.notasmartapp.Data.Models.Hospital;
 import com.covidapp.notasmartapp.POJO.Article;
 import com.covidapp.notasmartapp.POJO.Result;
 import com.google.firebase.auth.FirebaseUser;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public interface MainContract {
@@ -44,6 +46,18 @@ public interface MainContract {
         void showLoading();
         void hideLoading();
     }
+
+    interface HospitalView{
+        void onSuccess(ArrayList<Hospital> list);
+        void onFailed(String error);
+        void showLoading();
+        void hideLoading();
+    }
+
+    interface  HospitalPresenter{
+        void loadHospitals();
+    }
+
 
     interface MapPresenter{
         void loadLocation(Location location);

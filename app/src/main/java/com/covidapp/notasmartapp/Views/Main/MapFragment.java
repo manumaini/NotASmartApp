@@ -90,6 +90,8 @@ public class MapFragment extends Fragment implements MainContract.MapView {
                 @Override
                 public void onSuccess(Location location) {
                     if (location != null) {
+
+                        Log.d(TAG, "onSuccess: "+location.getLongitude()+"  "+location.getLatitude());
                         presenter.loadLocation(location);
                     } else {
                         Toast.makeText(getContext(), "cant get the current location", Toast.LENGTH_LONG).show();

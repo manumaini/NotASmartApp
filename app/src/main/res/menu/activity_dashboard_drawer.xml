@@ -21,6 +21,12 @@
             android:title="@string/Find_Hospitals" />
 
         <item
+            android:icon="@drawable/ic_hospital"
+            android:iconTint="@color/colorAccent"
+            android:title="Hospitals"
+            android:id="@+id/menu_Fhospitals"/>
+
+        <item
             android:id="@+id/menu_search"
             android:icon="@drawable/ic_search"
             android:iconTint="@color/colorAccent"

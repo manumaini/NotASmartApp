@@ -121,6 +121,14 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 toolbar.setTitle(R.string.Settings);
                 break;
 
+            case R.id.menu_Fhospitals:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new HospitalsFragment()).commit();
+                navigationView.setCheckedItem(R.id.menu_hospitals);
+                toolbar.setTitle(R.string.Hospital);
+                break;
+
+
+
 
         }
         drawer.closeDrawer(GravityCompat.START);

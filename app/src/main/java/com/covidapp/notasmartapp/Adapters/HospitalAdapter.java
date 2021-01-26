@@ -48,6 +48,7 @@ public class HospitalAdapter extends RecyclerView.Adapter<HospitalAdapter.Holder
         holder.address.setText(list.get(position).getAddress());
         holder.ratingBar.setRating(list.get(position).getRating());
         holder.phone.setText(list.get(position).getPhone());
+        holder.beds.setText(String.valueOf(list.get(position).getAvailableBeds()));
 
         //status open/close
         if (list.get(position).isOpen()){
@@ -75,6 +76,7 @@ public class HospitalAdapter extends RecyclerView.Adapter<HospitalAdapter.Holder
         private ImageView statusIcon;
         private TextView statusText;
         private TextView phone;
+        private TextView beds;
 
         public Holder(@NonNull View view) {
             super(view);
@@ -85,6 +87,7 @@ public class HospitalAdapter extends RecyclerView.Adapter<HospitalAdapter.Holder
             statusIcon = view.findViewById(R.id.hospital_statusIcon);
             statusText = view.findViewById(R.id.hospital_statusText);
             phone = view.findViewById(R.id.hospital_phone);
+            beds = view.findViewById(R.id.hospital_Beds);
         }
     }
 }

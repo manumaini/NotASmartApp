@@ -13,7 +13,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 import retrofit2.converter.scalars.ScalarsConverterFactory;
 
 public class RetrofitClient {
-    private final String BASE_URL = "https://api.covidindiatracker.com";
+    private final String BASE_URL = "https://api.covid19india.org";
     public static RetrofitClient mInstance;
     private Retrofit retrofit;
 

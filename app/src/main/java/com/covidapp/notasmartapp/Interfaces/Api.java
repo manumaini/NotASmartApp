@@ -5,8 +5,6 @@ import com.covidapp.notasmartapp.POJO.CovidStateData;
 import com.covidapp.notasmartapp.POJO.HealthNewsResponse;
 import com.covidapp.notasmartapp.POJO.LocationResponse;
 
-import java.util.List;
-
 import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Query;
@@ -14,7 +12,7 @@ import retrofit2.http.Query;
 public interface Api {
 
     @GET("/data.json")
-    Call<List<CovidStateData>> getAllCovidData();
+    Call<CovidStateData> getAllCovidData();
 
     @GET("http://newsapi.org/v2/top-headlines?country=in&category=health&apiKey=8a6ac3a1466e47afaff19ef069cc02e9")
     Call<HealthNewsResponse> getNews();

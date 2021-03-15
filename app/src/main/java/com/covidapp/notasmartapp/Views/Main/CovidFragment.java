@@ -2,7 +2,6 @@ package com.covidapp.notasmartapp.Views.Main;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -17,26 +16,24 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-//import com.covidapp.notasmartapp.Adapters.DistrictDataAdapter;
 import com.covidapp.notasmartapp.Clients.RetrofitClient;
 import com.covidapp.notasmartapp.Interfaces.Api;
 import com.covidapp.notasmartapp.POJO.CovidStateData;
 import com.covidapp.notasmartapp.R;
-import com.github.mikephil.charting.animation.Easing;
 import com.github.mikephil.charting.charts.PieChart;
-import com.github.mikephil.charting.data.PieData;
-import com.github.mikephil.charting.data.PieDataSet;
-import com.github.mikephil.charting.data.PieEntry;
-import com.github.mikephil.charting.utils.ColorTemplate;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
+//import com.covidapp.notasmartapp.Adapters.DistrictDataAdapter;
+
 public class CovidFragment extends Fragment {
+    
+    
+    private final static String TAG = "CovidFragment";
 
     private PieChart pieChart;
     private Api api;;
@@ -46,6 +43,7 @@ public class CovidFragment extends Fragment {
     private ListView listView;
 //    private ArrayList<CovidStateData.CovidDistrictData> districtList;
 //    private DistrictDataAdapter districtDataAdapter;
+    
     private RelativeLayout loading;
     private ImageView dropDown;
     private String[] states={"Maharashtra","Tamil Nadu","Karnataka","Punjab","Gujarat","Kerala","Uttar Pradesh",
@@ -106,13 +104,14 @@ public class CovidFragment extends Fragment {
     public void loadData(){
         showLoading();
         api=RetrofitClient.getInstance().getApi();
-        Call<List<CovidStateData>> call=api.getAllCovidData();
+        Call<CovidStateData> call=api.getAllCovidData();
         String[] list=getActivity().getResources().getStringArray(R.array.choose_state);
-        call.enqueue((new Callback<List<CovidStateData>>() {
+        Log.d(TAG, "loadData: in covidfragment loaddata");
+        call.enqueue(new Callback<CovidStateData>() {
             @Override
-            public void onResponse(Call<List<CovidStateData>> call, Response<List<CovidStateData>> response) {
+            public void onResponse(Call<CovidStateData> call, Response<CovidStateData> response) {
                 hideLoading();
-                List<CovidStateData> dataList=response.body();
+                List<CovidStateData.Statewise> dataList= response.body().statewise;
                 Log.d("hello",dataList.toString());
 //                for(CovidStateData data : dataList){
 //                    hideLoading();
@@ -159,20 +158,20 @@ public class CovidFragment extends Fragment {
 //                    listView.setAdapter(districtDataAdapter);
 //                        return;
 //                    }
-//                }
             }
 
             @Override
-            public void onFailure(Call<List<CovidStateData>> call, Throwable t) {
+            public void onFailure(Call<CovidStateData> call, Throwable t) {
 
             }
-        }));
+        });
+
     }
 
     private void updateUI(String getState) {
         showLoading();
         api = RetrofitClient.getInstance().getApi();
-        Call<List<CovidStateData>> call = api.getAllCovidData();
+ /*       Call<List<CovidStateData>> call = api.getAllCovidData();
         call.enqueue(new Callback<List<CovidStateData>>() {
             @Override
             public void onResponse(Call<List<CovidStateData>> call, Response<List<CovidStateData>> response) {
@@ -231,6 +230,6 @@ public class CovidFragment extends Fragment {
             public void onFailure(Call<List<CovidStateData>> call, Throwable t) {
 
             }
-        });
+        });*/
     }
 }

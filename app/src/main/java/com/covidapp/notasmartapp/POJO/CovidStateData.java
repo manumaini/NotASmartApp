@@ -28,5 +28,45 @@ public class CovidStateData {
             this.deaths=deaths;
             this.recovered=recovered;
         }
+
+        public String getName() {
+            return name;
+        }
+
+        public void setName(String name) {
+            this.name = name;
+        }
+
+        public int getConfirmed() {
+            return confirmed;
+        }
+
+        public void setConfirmed(int confirmed) {
+            this.confirmed = confirmed;
+        }
+
+        public int getActive() {
+            return active;
+        }
+
+        public void setActive(int active) {
+            this.active = active;
+        }
+
+        public int getDeaths() {
+            return deaths;
+        }
+
+        public void setDeaths(int deaths) {
+            this.deaths = deaths;
+        }
+
+        public int getRecovered() {
+            return recovered;
+        }
+
+        public void setRecovered(int recovered) {
+            this.recovered = recovered;
+        }
     }
 }

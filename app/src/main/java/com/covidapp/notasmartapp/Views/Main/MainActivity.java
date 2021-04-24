@@ -109,6 +109,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 toolbar.setTitle(R.string.Hospital);
                 break;
 
+            case R.id.menu_covid_symptoms:
+                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new CovidSymptomsFragment()).commit();
+                 navigationView.setCheckedItem(R.id.menu_covid_symptoms);
+                 toolbar.setTitle(R.string.Covid_Symptoms);
+                 break;
+
             case R.id.menu_search:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new SearchFragment()).commit();
                 navigationView.setCheckedItem(R.id.menu_search);

@@ -10,6 +10,9 @@
     <string name="Search">Search</string>
     <string name="Total">Total Cases</string>
     <string name="Hospital">Hospitals</string>
+    <string name="Covid_Symptoms">Covid Symptoms</string>
+    <string name="Symptoms_line">Common Symptoms of Covid-19 includes respiratory symptoms,fever,cough,shortness of breath,
+     etc. In more severe cases, the infection can cause severe respiratory syndromes,kidney failure and even death.</string>
 
     <string-array name="choose_state">
         <item>Maharashtra</item>
@@ -55,5 +58,7 @@
     <string name="or_text">OR</string>
 
     <string name="call_ambulance">Call Ambulance</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

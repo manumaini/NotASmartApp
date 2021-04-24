@@ -23,8 +23,14 @@
         <item
             android:icon="@drawable/ic_hospital"
             android:iconTint="@color/colorAccent"
-            android:title="Hospitals"
+            android:title="@string/Hospital"
             android:id="@+id/menu_Fhospitals"/>
+
+        <item
+            android:id="@+id/menu_covid_symptoms"
+            android:iconTint="@color/colorAccent"
+            android:icon="@drawable/symptoms"
+            android:title="@string/Covid_Symptoms" />
 
         <item
             android:id="@+id/menu_search"

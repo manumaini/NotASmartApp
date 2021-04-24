@@ -12,7 +12,7 @@
         android:value="@integer/google_play_services_version" />
     <meta-data
         android:name="com.google.android.geo.API_KEY"
-        android:value="AIzaSyBFz0MT0ZP8Ka7NQwwG6nQewRJ9NZPs_MM"></meta-data>
+        android:value="AIzaSyBFz0MT0ZP8Ka7NQwwG6nQewRJ9NZPs_MM" />
 
     <application
         android:allowBackup="true"
@@ -22,18 +22,18 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Views.VerificationActivity"></activity>
+        <activity android:name=".Views.VerificationActivity" />
 
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyBFz0MT0ZP8Ka7NQwwG6nQewRJ9NZPs_MM"></meta-data>
+            android:value="AIzaSyBFz0MT0ZP8Ka7NQwwG6nQewRJ9NZPs_MM" />
 
         <activity android:name=".Views.RegistrationActivity" />
-        <activity android:name=".Views.WebActivity"></activity>
-        <activity android:name=".Views.LoginActivity"></activity>
+        <activity android:name=".Views.WebActivity" />
+        <activity android:name=".Views.LoginActivity" />
         <activity android:name=".Views.Main.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

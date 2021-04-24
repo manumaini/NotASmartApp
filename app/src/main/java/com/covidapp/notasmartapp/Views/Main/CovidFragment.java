@@ -41,7 +41,7 @@ public class CovidFragment extends Fragment {
     private final static String TAG = "CovidFragment";
 
     private PieChart pieChart;
-    private Api api;;
+    private Api api;
     private TextView totalCases,stateNameText;
     private int position=0;
     private String getState="";

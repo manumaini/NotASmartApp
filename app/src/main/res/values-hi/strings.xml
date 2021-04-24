@@ -10,6 +10,8 @@
     <string name="Search">શોધો</string>
     <string name="Total">कुल मामले</string>
     <string name="Hospital">अस्पताल</string>
+    <string name="Covid_Symptoms">Covid Symptoms</string>
+    <string name="Symptoms_line">dhd</string>
 
     <string-array name="choose_state">
         <item>महाराष्ट्र</item>

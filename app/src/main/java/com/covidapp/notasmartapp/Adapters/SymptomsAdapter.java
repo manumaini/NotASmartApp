@@ -1,6 +1,7 @@
 package com.covidapp.notasmartapp.Adapters;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -43,6 +44,13 @@ public class SymptomsAdapter extends RecyclerView.Adapter<SymptomsAdapter.ViewHo
     @Override
     public void onBindViewHolder(@NonNull SymptomsAdapter.ViewHolder holder, int position) {
           Symptoms list = symptoms.get(position);
+          double percentage = Double.valueOf(list.getPercentage());
+          if(percentage>=20.0)
+              holder.sympPerc.setBackgroundColor(Color.RED);
+          else if(percentage>=10.0&&percentage<=20.0)
+              holder.sympPerc.setBackgroundColor(Color.YELLOW);
+          else
+              holder.sympPerc.setBackgroundColor(Color.GREEN);
           holder.sympName.setText(list.getTypeName());
           holder.sympPerc.setText(list.getPercentage()+"%");
     }

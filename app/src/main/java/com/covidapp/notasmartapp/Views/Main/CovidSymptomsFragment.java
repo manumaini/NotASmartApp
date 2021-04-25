@@ -1,5 +1,6 @@
 package com.covidapp.notasmartapp.Views.Main;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -11,6 +12,8 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageButton;
 
 import com.covidapp.notasmartapp.Adapters.SymptomsAdapter;
 import com.covidapp.notasmartapp.POJO.Symptoms;
@@ -36,6 +39,8 @@ public class CovidSymptomsFragment extends Fragment {
     private String[] sympName = {"Fever","Dry Cough","Fatigue","Shortness of Breath","Muscle Pain",
         "Sore Throat","Headache","Chills","Nausea or Vomiting","Nasal Congestion","Diarrhea","Conjunctival Congesion"};
     private String[] sympPerc ={"87.9","67.7","38.1","18.6","14.8","13.9","13.6","11.4","5.0","4.8","3.7","0.8"};
+    private Button takeAssesment;
+    private ImageButton takeAssementOnly;
 
     // TODO: Rename and change types of parameters
     private String mParam1;
@@ -79,6 +84,22 @@ public class CovidSymptomsFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_covid_symptoms, container, false);
         recyclerView = (RecyclerView)view.findViewById(R.id.symptoms_view);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+        takeAssesment=view.findViewById(R.id.take_Assessment);
+        takeAssementOnly=view.findViewById(R.id.take_Assessment_image);
+        takeAssesment.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getContext(),self_assessment_message.class);
+                startActivity(intent);
+            }
+        });
+        takeAssementOnly.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getContext(),self_assessment_message.class);
+                startActivity(intent);
+            }
+        });
         String[] symptomsList=getActivity().getResources().getStringArray(R.array.symptoms);
         symptoms=new ArrayList<>();
         for(int i=0; i<sympName.length; i++){

@@ -70,6 +70,10 @@
 
     <string name="take_my_assessment">मेरा असेसमेंट ले लो</string>
     <string name="think_you_are_affected">लगता है कि आप प्रभावित हैं? आकलन करें</string>
+    <string name="Disclaimer1">Please Give Correct Answers</string>
+    <string name="Disclaimer2">Be a responsible citizen and provide accurate answers in this assessment test.
+        This test will help you to know your current condition.</string>
+    <string name="start_my_assessment">Start my Assessment</string>
 
     <string name="choose_a_state">एक राज्य चुनें</string>
     <string name="choose_lang">भाषा चुनें</string>

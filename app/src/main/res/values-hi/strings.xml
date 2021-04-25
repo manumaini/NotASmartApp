@@ -10,8 +10,9 @@
     <string name="Search">શોધો</string>
     <string name="Total">कुल मामले</string>
     <string name="Hospital">अस्पताल</string>
-    <string name="Covid_Symptoms">Covid Symptoms</string>
-    <string name="Symptoms_line">dhd</string>
+    <string name="Covid_Symptoms">कोविड के लक्षण</string>
+    <string name="Symptoms_line">कोविद -19 के सामान्य लक्षणों में श्वसन संबंधी लक्षण, बुखार, खांसी, सांस की तकलीफ,
+     आदि अधिक गंभीर मामलों में, संक्रमण गंभीर श्वसन सिंड्रोम, गुर्दे की विफलता और यहां तक​कि मृत्यु का कारण बन सकता है।</string>
 
     <string-array name="choose_state">
         <item>महाराष्ट्र</item>
@@ -51,6 +52,24 @@
         <item>दादरा और नगर हवेली</item>
         <item>लक्षद्वीप</item>
     </string-array>
+
+    <string-array name="symptoms">
+        <item>बुखार</item>
+        <item>सूखी खाँसी</item>
+        <item>थकान</item>
+        <item>सांस लेने में कठिनाई</item>
+        <item>मांसपेशियों में दर्द</item>
+        <item>गले में खराश</item>
+        <item>सरदर्द</item>
+        <item>ठंड लगना</item>
+        <item>मतली या उलटी</item>
+        <item>नाक बंद</item>
+        <item>दस्त</item>
+        <item>कंजेक्टिव्हल कंजेशन</item>
+    </string-array>
+
+    <string name="take_my_assessment">मेरा असेसमेंट ले लो</string>
+    <string name="think_you_are_affected">लगता है कि आप प्रभावित हैं? आकलन करें</string>
 
     <string name="choose_a_state">एक राज्य चुनें</string>
     <string name="choose_lang">भाषा चुनें</string>

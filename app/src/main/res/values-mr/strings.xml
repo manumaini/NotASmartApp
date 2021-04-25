@@ -11,8 +11,9 @@
     <string name="Search">शोधा</string>
     <string name="Total">एकूण प्रकरणे</string>
     <string name="Hospital">रुग्णालये</string>
-    <string name="Covid_Symptoms">Covid Symptoms</string>
-    <string name="Symptoms_line">dhd</string>
+    <string name="Covid_Symptoms">कोविड लक्षणे</string>
+    <string name="Symptoms_line">कोविड -१ of च्या सामान्य लक्षणांमध्ये श्वसन लक्षणे, ताप, खोकला, श्वास लागणे,
+        इत्यादी गंभीर प्रकरणांमध्ये, संसर्गामुळे गंभीर श्वसन सिंड्रोम, मूत्रपिंड निकामी होणे आणि मृत्यू देखील होते.</string>
 
     <string-array name="choose_state">
         <item>महाराष्ट्र</item>
@@ -52,6 +53,24 @@
         <item>दादरा आणि नगर हवेली</item>
         <item>लक्षद्वीप</item>
     </string-array>
+
+    <string-array name="symptoms">
+        <item>ताप</item>
+        <item>कोरडा खोकला</item>
+        <item>थकवा</item>
+        <item>धाप लागणे</item>
+        <item>स्नायू वेदना</item>
+        <item>घसा खवखवणे</item>
+        <item>डोकेदुखी</item>
+        <item>थंडी वाजून येणे</item>
+        <item>मळमळ किंवा उलट्या</item>
+        <item>नाक बंद</item>
+        <item>अतिसार</item>
+        <item>कंजेक्टिव्हल कंजेशन</item>
+    </string-array>
+
+    <string name="take_my_assessment">माझे मूल्यांकन घ्या</string>
+    <string name="think_you_are_affected">आपण प्रभावित आहेत वाटते? मूल्यांकन घ्या</string>
 
     <string name="choose_a_state">राज्य निवडा</string>
     <string name="choose_lang">एक भाषा निवडा</string>

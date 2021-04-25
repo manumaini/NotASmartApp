@@ -53,12 +53,29 @@
         <item>Lakshadweep</item>
     </string-array>
 
+    <string-array name="symptoms">
+        <item>Fever</item>
+        <item>Dry Cough</item>
+        <item>Fatigue</item>
+        <item>Shortness of Breath</item>
+        <item>Muscle Pain</item>
+        <item>Sore Throat</item>
+        <item>Headache</item>
+        <item>Chills</item>
+        <item>Nausea or Vomiting</item>
+        <item>Nasal Congestion</item>
+        <item>Diarrhea</item>
+        <item>Conjunctival Congesion</item>
+    </string-array>
+
+    <string name="take_my_assessment">Take my Assessment</string>
+    <string name="think_you_are_affected">Think you are affected? Take Assessment</string>
+
     <string name="choose_a_state">Choose a State</string>
     <string name="choose_lang">Choose a Language</string>
     <string name="or_text">OR</string>
 
     <string name="call_ambulance">Call Ambulance</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

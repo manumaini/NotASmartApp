@@ -11,8 +11,9 @@
     <string name="Search">શોધો</string>
     <string name="Total">કુલ કેસ</string>
     <string name="Hospital">હોસ્પિટલો</string>
-    <string name="Covid_Symptoms">Covid Symptoms</string>
-    <string name="Symptoms_line">dhd</string>
+    <string name="Covid_Symptoms">કોવિડના લક્ષણો</string>
+    <string name="Symptoms_line">કોવિડ -19 ના સામાન્ય લક્ષણોમાં શ્વસન લક્ષણો, તાવ, ઉધરસ, શ્વાસની તકલીફ,
+     વગેરે. વધુ ગંભીર કેસોમાં ચેપ ગંભીર શ્વસન સિન્ડ્રોમ્સ, કિડની નિષ્ફળતા અને મૃત્યુનું કારણ બની શકે છે.</string>
 
     <string-array name="choose_state">
         <item>મહારાષ્ટ્ર</item>
@@ -52,6 +53,24 @@
         <item>દાદરા અને નગર હવેલી</item>
         <item>લક્ષદ્વીપ</item>
     </string-array>
+
+    <string-array name="symptoms">
+        <item>તાવ</item>
+        <item>સુકા ઉધરસ</item>
+        <item>થાક</item>
+        <item>હાંફ ચઢવી</item>
+        <item>સ્નાયુમાં દુખાવો</item>
+        <item>સુકુ ગળું</item>
+        <item>માથાનો દુખાવો</item>
+        <item>ઠંડી</item>
+        <item>ઉબકા અથવા Vલટી</item>
+        <item>અનુનાસિક ભીડ</item>
+        <item>અતિસાર</item>
+        <item>કન્જુક્ટીવલ ભીડ</item>
+    </string-array>
+
+    <string name="take_my_assessment">મારું આકારણી લો</string>
+    <string name="think_you_are_affected">લાગે છે કે તમે અસરગ્રસ્ત છો? આકારણી લો</string>
 
     <string name="choose_a_state">રાજ્ય પસંદ કરો</string>
     <string name="choose_lang">કોઈ ભાષા પસંદ કરો</string>

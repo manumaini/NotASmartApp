@@ -79,9 +79,10 @@ public class CovidSymptomsFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_covid_symptoms, container, false);
         recyclerView = (RecyclerView)view.findViewById(R.id.symptoms_view);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+        String[] symptomsList=getActivity().getResources().getStringArray(R.array.symptoms);
         symptoms=new ArrayList<>();
         for(int i=0; i<sympName.length; i++){
-            Symptoms symptom = new Symptoms(sympName[i],sympPerc[i]);
+            Symptoms symptom = new Symptoms(symptomsList[i],sympPerc[i]);
             symptoms.add(symptom);
             adapter = new SymptomsAdapter(getContext(),symptoms);
         }

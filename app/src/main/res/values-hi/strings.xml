@@ -13,10 +13,10 @@
     <string name="Covid_Symptoms">कोविड के लक्षण</string>
     <string name="Symptoms_line">कोविद -19 के सामान्य लक्षणों में श्वसन संबंधी लक्षण, बुखार, खांसी, सांस की तकलीफ,
      आदि अधिक गंभीर मामलों में, संक्रमण गंभीर श्वसन सिंड्रोम, गुर्दे की विफलता और यहां तक​कि मृत्यु का कारण बन सकता है।</string>
-    <string name="Assessment_dialog">Your Asssessment is going on.Do you want to cancel your self assessment?</string>
-    <string name="text_yes">Yes</string>
-    <string name="text_no">No</string>
-    <string name="assessment_cancelled">Self Assessment Cancelled</string>
+    <string name="Assessment_dialog">आपका मूल्यांकन जारी है। क्या आप अपना स्व-मूल्यांकन रद्द करना चाहते हैं?</string>
+    <string name="text_yes">हाँ</string>
+    <string name="text_no">नहीं</string>
+    <string name="assessment_cancelled">स्व मूल्यांकन रद्द किया गया</string>
 
     <string-array name="choose_state">
         <item>महाराष्ट्र</item>
@@ -72,12 +72,62 @@
         <item>कंजेक्टिव्हल कंजेशन</item>
     </string-array>
 
+    <string-array name="questions">
+        <item>क्या आप निम्न लक्षणों में से किसी का अनुभव कर रहे हैं</item>
+        <item>क्या आपने कभी निम्न में से कोई भी किया है</item>
+        <item>क्या आपने पिछले 28-45 दिनों में निम्नलिखित में से कोई किया है</item>
+        <item>क्या आपने सार्वजनिक स्थानों पर नीचे की किसी भी जगह से परहेज किया है</item>
+    </string-array>
+
+    <string-array name="optionAList">
+        <item>बुखार या मांसपेशियों में दर्द</item>
+        <item>मधुमेह</item>
+        <item>अंतरराष्ट्रीय स्तर पर देखा गया</item>
+        <item>मास्क पहने हुए</item>
+    </string-array>
+
+    <string-array name="optionBList">
+        <item>सूखी खाँसी या स्वाद की कमी</item>
+        <item>फेफड़ों की बीमारी</item>
+        <item>जो भी विदेश से आया, उससे मिला</item>
+        <item>हाथ की सफाई</item>
+    </string-array>
+
+    <string-array name="optionCList">
+        <item>सांस लेने में कठिनाई</item>
+        <item>दिल की बीमारी</item>
+        <item>जो भी बाद में COVID पॉजिटिव आता है, उससे मिलें</item>
+        <item>सोशल डिस्टन्सिंग</item>
+    </string-array>
+
+    <string-array name="optionDList">
+        <item>इनमे से कोई भी नहीं</item>
+        <item>इनमे से कोई भी नहीं</item>
+        <item>इनमे से कोई भी नहीं</item>
+        <item>नहीं</item>
+    </string-array>
+
+    <string name="your_assessment_result">आपका मूल्यांकन परिणाम</string>
+    <string name="safe_result">आपका संक्रमण जोखिम कम है। हम आपको नोवेल कोरोनावायरस होने के किसी भी अवसर से बचने के लिए घर पर रहने की सलाह देते हैं। \n स्वयं का मूल्यांकन करें। यदि आप कोई लक्षण विकसित करते हैं
+        या किसी भी COVID-19 रोगी के संपर्क में आएं।</string>
+    <string name="unsafe_result">आपके स्व-मूल्यांकन परीक्षण के अनुसार, आप नोवेल कोरोनावायरस से संक्रमित हो सकते हैं।
+                    इसलिए सभी आवश्यक उपायों का पालन करते हुए तुरंत अस्पताल जाएं और जांच करवाएं। \n
+                    अपना रिजल्ट आने से पहले, अपने आप को अलग-थलग रखें और बाहर न जाएं।</string>
+    <string name="danger_result">आपके स्व-मूल्यांकन परीक्षण के अनुसार, यह अत्यधिक सुनिश्चित है कि आप संक्रमित हो गए हैं
+                    उपन्यास कोरोनावायरस द्वारा। इसलिए अपने आप को अलग करें और पास के हॉस्पटल में जाएं और इसका परीक्षण करवाएं। \n
+                    तब तक संपर्क से बचें और उन सभी सावधानियों और उपायों का पालन करें जो आपको अस्पताल द्वारा दिए जाएंगे</string>
+
+    <string name="next">अगला</string>
+    <string name="finish">खत्म</string>
+    <string name="self_assessment_test">सेल्फ असेसमेंट टेस्ट</string>
+
+    <string name="starting_self_assessment">स्व मूल्यांकन शुरू...</string>
     <string name="take_my_assessment">मेरा असेसमेंट ले लो</string>
     <string name="think_you_are_affected">लगता है कि आप प्रभावित हैं? आकलन करें</string>
-    <string name="Disclaimer1">Please Give Correct Answers</string>
-    <string name="Disclaimer2">Be a responsible citizen and provide accurate answers in this assessment test.
-        This test will help you to know your current condition.</string>
-    <string name="start_my_assessment">Start my Assessment</string>
+    <string name="Disclaimer1">कृपया सही उत्तर दें</string>
+    <string name="Disclaimer2">एक जिम्मेदार नागरिक बनें और इस मूल्यांकन परीक्षण में सटीक उत्तर प्रदान करें।
+        यह परीक्षण आपको अपनी वर्तमान स्थिति जानने में मदद करेगा।</string>
+    <string name="start_my_assessment">मेरा आकलन शुरू करो</string>
 
     <string name="choose_a_state">एक राज्य चुनें</string>
     <string name="choose_lang">भाषा चुनें</string>

@@ -24,7 +24,7 @@ public class AssessmentResult extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_assessment_result);
         toolbar=findViewById(R.id.toolbar);
-        toolbar.setTitle("Your Assessment Result");
+        toolbar.setTitle(R.string.your_assessment_result);
         resultimage=findViewById(R.id.resultImage);
         resultText=findViewById(R.id.resultText);
         goBack=findViewById(R.id.goBack);
@@ -32,21 +32,15 @@ public class AssessmentResult extends AppCompatActivity {
         int score=intent.getIntExtra("score",0);
         if(score==0){
             resultimage.setImageResource(R.drawable.safe);
-            resultText.setText("Your infection risk is low.We recommend you to stay at home to avoid" +
-                    "any chance of getting Novel Coronavirus.\n Retake self Assessmentif you develop any sumptoms or come in contact with " +
-                    "any of the COVID-19 patient");
+            resultText.setText(R.string.safe_result);
         }
         else if(score<=10){
             resultimage.setImageResource(R.drawable.unsafe);
-            resultText.setText("According to your self assessment test, you may have been infected by Novel Coronavirus." +
-                    "So go to the hospital immediately following all the necessary measures and get it tested.\n" +
-                    "Before your result come, keep yourself isolated and dont go outside.");
+            resultText.setText(R.string.unsafe_result);
         }
         else {
             resultimage.setImageResource(R.drawable.danger);
-            resultText.setText("According to your self assessment test, it is highly sure that you have been infected" +
-                    "by Novel Coronavirus. So isolate yourself and go to nearby hosptal and get it tested.\n" +
-                    "Till then Avoid contact and follow all the precautions and measures which you will be given by the hospital");
+            resultText.setText(R.string.danger_result);
         }
         goBack.setOnClickListener(new View.OnClickListener() {
             @Override

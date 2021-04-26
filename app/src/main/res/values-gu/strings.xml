@@ -14,10 +14,10 @@
     <string name="Covid_Symptoms">કોવિડના લક્ષણો</string>
     <string name="Symptoms_line">કોવિડ -19 ના સામાન્ય લક્ષણોમાં શ્વસન લક્ષણો, તાવ, ઉધરસ, શ્વાસની તકલીફ,
      વગેરે. વધુ ગંભીર કેસોમાં ચેપ ગંભીર શ્વસન સિન્ડ્રોમ્સ, કિડની નિષ્ફળતા અને મૃત્યુનું કારણ બની શકે છે.</string>
-    <string name="Assessment_dialog">Your Asssessment is going on.Do you want to cancel your self assessment?</string>
-    <string name="text_yes">Yes</string>
-    <string name="text_no">No</string>
-    <string name="assessment_cancelled">Self Assessment Cancelled</string>
+    <string name="Assessment_dialog">તમારું એસેસમેન્ટ ચાલુ છે. શું તમે તમારું સ્વ મૂલ્યાંકન રદ કરવા માંગો છો?</string>
+    <string name="text_yes">હા</string>
+    <string name="text_no">ના</string>
+    <string name="assessment_cancelled">સ્વ આકારણી રદ</string>
 
     <string-array name="choose_state">
         <item>મહારાષ્ટ્ર</item>
@@ -73,12 +73,63 @@
         <item>કન્જુક્ટીવલ ભીડ</item>
     </string-array>
 
+    <string-array name="questions">
+        <item>શું તમે નીચેના લક્ષણોમાંથી કોઈ અનુભવી રહ્યા છો</item>
+        <item>તમારી પાસે નીચેનીમાંથી કોઈ પણ છે</item>
+        <item>છેલ્લા 28-45 દિવસમાં તમે નીચેનામાંથી કોઈ પણ કર્યું છે</item>
+        <item>શું તમે સાર્વજનિક સ્થળોએ નીચે આપેલા કોઈપણને ટાળ્યા છે</item>
+    </string-array>
+
+    <string-array name="optionAList">
+        <item>તાવ અથવા સ્નાયુઓમાં દુખાવો</item>
+        <item>ડાયાબિટીસ</item>
+        <item>આંતરરાષ્ટ્રીય સ્તરે મુલાકાત લીધી</item>
+        <item>માસ્ક પહેરીને</item>
+    </string-array>
+
+    <string-array name="optionBList">
+        <item>સુકા ઉધરસ અથવા સ્વાદનો અભાવ</item>
+        <item>ફેફસાના રોગ</item>
+        <item>વિદેશથી આવેલા કોઈપણને મળ્યા</item>
+        <item>હાથની સ્વચ્છતા</item>
+    </string-array>
+
+    <string-array name="optionCList">
+        <item>હાંફ ચઢવી</item>
+        <item>હૃદય રોગ</item>
+        <item>જેની સાથે પછીથી COVID હકારાત્મક મળે છે તે મળ્યા</item>
+        <item>સામાજિક સ્તરે અન્ય લોકોથી થોડી દૂરીનું અંતર</item>
+    </string-array>
+
+    <string-array name="optionDList">
+        <item>ઉપર્યુક્તમાંથી કોઈ નહિ</item>
+        <item>ઉપર્યુક્તમાંથી કોઈ નહિ</item>
+        <item>ઉપર્યુક્તમાંથી કોઈ નહિ</item>
+        <item>ના</item>
+    </string-array>
+
+    <string name="next">આગળ</string>
+    <string name="finish">સમાપ્ત</string>
+    <string name="self_assessment_test">સેલ્ફ એસેસમેન્ટ ટેસ્ટ</string>
+
+    <string name="your_assessment_result">તમારા આકારણી પરિણામ</string>
+    <string name="safe_result">તમારું ચેપનું જોખમ ઓછું છે. નવલકથા કોરોનાવાયરસ થવાની કોઈ શક્યતા ટાળવા માટે અમે તમને ઘરે રોકાવાની ભલામણ કરીશું.\n સ્વત મૂલ્યાંકન કરો
+        અથવા COVID-19 ના કોઈપણ દર્દીના સંપર્કમાં આવો</string>
+    <string name="unsafe_result">
+તમારી સ્વ મૂલ્યાંકન પરીક્ષણ મુજબ, તમને નોવેલ કોરોનાવાયરસથી ચેપ લાગ્યો હશે.
+                    તેથી તાત્કાલિક તમામ જરૂરી પગલાઓને અનુસરીને હોસ્પિટલમાં જાઓ અને તેનું પરીક્ષણ કરો.\n
+                    તમારું પરિણામ આવે તે પહેલાં, તમારી જાતને અલગ રાખો અને બહાર ન જશો.</string>
+    <string name="danger_result">તમારી સ્વ મૂલ્યાંકન પરીક્ષણ મુજબ, તે ખૂબ ખાતરી છે કે તમને ચેપ લાગ્યો છે
+                    નવલકથા કોરોનાવાયરસ દ્વારા. તેથી તમારી જાતને એકલ કરો અને નજીકના છાત્રાલય પર જાઓ અને તેનું પરીક્ષણ કરો.\n
+                    ત્યાં સુધી સંપર્કને ટાળો અને બધી સાવચેતીઓ અને પગલાઓને અનુસરો જે તમને હોસ્પિટલ દ્વારા આપવામાં આવશે</string>
+
+    <string name="starting_self_assessment">સ્વ આકારણી શરૂ કરી રહ્યા છીએ...</string>
     <string name="take_my_assessment">મારું આકારણી લો</string>
     <string name="think_you_are_affected">લાગે છે કે તમે અસરગ્રસ્ત છો? આકારણી લો</string>
-    <string name="Disclaimer1">Please Give Correct Answers</string>
-    <string name="Disclaimer2">Be a responsible citizen and provide accurate answers in this assessment test.
-        This test will help you to know your current condition.</string>
-    <string name="start_my_assessment">Start my Assessment</string>
+    <string name="Disclaimer1">કૃપા કરીને સાચા જવાબો આપો</string>
+    <string name="Disclaimer2">એક જવાબદાર નાગરિક બનો અને આ આકારણી પરીક્ષામાં સચોટ જવાબો પ્રદાન કરો.
+        આ પરીક્ષણ તમને તમારી હાલની સ્થિતિ જાણવા માટે મદદ કરશે.</string>
+    <string name="start_my_assessment">મારું આકારણી શરૂ કરો</string>
 
     <string name="choose_a_state">રાજ્ય પસંદ કરો</string>
     <string name="choose_lang">કોઈ ભાષા પસંદ કરો</string>

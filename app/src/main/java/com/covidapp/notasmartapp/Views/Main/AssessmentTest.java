@@ -20,12 +20,11 @@ public class AssessmentTest extends AppCompatActivity {
     private Toolbar toolbar;
     private TextView questionText;
     private Button optionA,optionB,optionC,optionD,nextButton;
-    private String[] questions={"Are you experiencing any of the following symptoms","Have you ever had any of the following",
-              "Have you done any of the following in the last 28-45 days","Have you avoided any of the below in public places"};
-    private String[][] options={{"Fever or Muscle Pain","Dry Cough or lack of taste","Shortness of Breath","None of the above"},
-            {"Diabetes","Lung Disease","Heart Disease","None of the above"},
-            {"Visited Internationally","Met anyone who came from foreign country","Met anyone who later on gets COVID positive","None of the above"},
-            {"Wearing Masks","Hand Sanitization","Social Distancing","No"}};
+    private String[] questionsList;
+    private String[] optionsAList;
+    private String[] optionsBList;
+    private String[] optionsCList;
+    private String[] optionsDList;
     private int score=0,i=0;
 
     @Override
@@ -40,7 +39,14 @@ public class AssessmentTest extends AppCompatActivity {
         optionD=findViewById(R.id.optionMinor);
         nextButton=findViewById(R.id.nextButton);
         nextButton.setVisibility(View.GONE);
-        toolbar.setTitle("Self Assessment Test");
+
+        questionsList=getResources().getStringArray(R.array.questions);
+        optionsAList=getResources().getStringArray(R.array.optionAList);
+        optionsBList=getResources().getStringArray(R.array.optionBList);
+        optionsCList=getResources().getStringArray(R.array.optionCList);
+        optionsDList=getResources().getStringArray(R.array.optionDList);
+
+        toolbar.setTitle(R.string.self_assessment_test);
             setQuestionAndAnswers();
                 optionA.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -97,16 +103,16 @@ public class AssessmentTest extends AppCompatActivity {
     };
 
     void setQuestionAndAnswers(){
-        questionText.setText((i+1)+". "+questions[i]+"?");
-        optionA.setText("A. "+options[i][0]);
-        optionB.setText("B. "+options[i][1]);
-        optionC.setText("C. "+options[i][2]);
-        optionD.setText("D. "+options[i][3]);
-        if(i==2){
-            nextButton.setText("Finish");
+        questionText.setText((i+1)+". "+questionsList[i]+"?");
+        optionA.setText("A. "+optionsAList[i]);
+        optionB.setText("B. "+optionsBList[i]);
+        optionC.setText("C. "+optionsCList[i]);
+        optionD.setText("D. "+optionsDList[i]);
+        if(i==3){
+            nextButton.setText(R.string.finish);
         }
         else
-             nextButton.setText("Next");
+             nextButton.setText(R.string.next);
     }
 
     void handleMajorOptions(){

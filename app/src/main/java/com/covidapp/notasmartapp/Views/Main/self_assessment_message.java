@@ -20,7 +20,7 @@ public class self_assessment_message extends AppCompatActivity {
         setContentView(R.layout.activity_self_assessment_message);
         toolbar=findViewById(R.id.toolbar);
         startTest=findViewById(R.id.start_assessment);
-        toolbar.setTitle("Starting Self Assessment...");
+        toolbar.setTitle(R.string.starting_self_assessment);
         startTest.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

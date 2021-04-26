@@ -14,6 +14,10 @@
     <string name="Covid_Symptoms">कोविड लक्षणे</string>
     <string name="Symptoms_line">कोविड -१ of च्या सामान्य लक्षणांमध्ये श्वसन लक्षणे, ताप, खोकला, श्वास लागणे,
         इत्यादी गंभीर प्रकरणांमध्ये, संसर्गामुळे गंभीर श्वसन सिंड्रोम, मूत्रपिंड निकामी होणे आणि मृत्यू देखील होते.</string>
+    <string name="Assessment_dialog">Your Asssessment is going on.Do you want to cancel your self assessment?</string>
+    <string name="text_yes">Yes</string>
+    <string name="text_no">No</string>
+    <string name="assessment_cancelled">Self Assessment Cancelled</string>
 
     <string-array name="choose_state">
         <item>महाराष्ट्र</item>

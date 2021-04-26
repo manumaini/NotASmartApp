@@ -13,6 +13,10 @@
     <string name="Covid_Symptoms">Covid Symptoms</string>
     <string name="Symptoms_line">Common Symptoms of Covid-19 includes respiratory symptoms,fever,cough,shortness of breath,
      etc. In more severe cases, the infection can cause severe respiratory syndromes,kidney failure and other major causes.</string>
+    <string name="Assessment_dialog">Your Asssessment is going on.Do you want to cancel your self assessment?</string>
+    <string name="text_yes">Yes</string>
+    <string name="text_no">No</string>
+    <string name="assessment_cancelled">Self Assessment Cancelled</string>
 
     <string-array name="choose_state">
         <item>Maharashtra</item>

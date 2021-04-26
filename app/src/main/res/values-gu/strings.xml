@@ -14,6 +14,10 @@
     <string name="Covid_Symptoms">કોવિડના લક્ષણો</string>
     <string name="Symptoms_line">કોવિડ -19 ના સામાન્ય લક્ષણોમાં શ્વસન લક્ષણો, તાવ, ઉધરસ, શ્વાસની તકલીફ,
      વગેરે. વધુ ગંભીર કેસોમાં ચેપ ગંભીર શ્વસન સિન્ડ્રોમ્સ, કિડની નિષ્ફળતા અને મૃત્યુનું કારણ બની શકે છે.</string>
+    <string name="Assessment_dialog">Your Asssessment is going on.Do you want to cancel your self assessment?</string>
+    <string name="text_yes">Yes</string>
+    <string name="text_no">No</string>
+    <string name="assessment_cancelled">Self Assessment Cancelled</string>
 
     <string-array name="choose_state">
         <item>મહારાષ્ટ્ર</item>

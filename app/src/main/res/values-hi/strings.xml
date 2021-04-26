@@ -13,6 +13,10 @@
     <string name="Covid_Symptoms">कोविड के लक्षण</string>
     <string name="Symptoms_line">कोविद -19 के सामान्य लक्षणों में श्वसन संबंधी लक्षण, बुखार, खांसी, सांस की तकलीफ,
      आदि अधिक गंभीर मामलों में, संक्रमण गंभीर श्वसन सिंड्रोम, गुर्दे की विफलता और यहां तक​कि मृत्यु का कारण बन सकता है।</string>
+    <string name="Assessment_dialog">Your Asssessment is going on.Do you want to cancel your self assessment?</string>
+    <string name="text_yes">Yes</string>
+    <string name="text_no">No</string>
+    <string name="assessment_cancelled">Self Assessment Cancelled</string>
 
     <string-array name="choose_state">
         <item>महाराष्ट्र</item>

@@ -13,6 +13,10 @@
     <string name="Covid_Symptoms">Covid Symptoms</string>
     <string name="Symptoms_line">Common Symptoms of Covid-19 includes respiratory symptoms,fever,cough,shortness of breath,
      etc. In more severe cases, the infection can cause severe respiratory syndromes,kidney failure and other major causes.</string>
+    <string name="Assessment_dialog">Your Asssessment is going on.Do you want to cancel your self assessment?</string>
+    <string name="text_yes">Yes</string>
+    <string name="text_no">No</string>
+    <string name="assessment_cancelled">Self Assessment Cancelled</string>
 
     <string-array name="choose_state">
         <item>Maharashtra</item>
@@ -68,9 +72,59 @@
         <item>Conjunctival Congesion</item>
     </string-array>
 
+    <string-array name="questions">
+        <item>Are you experiencing any of the following symptoms</item>
+        <item>Have you ever had any of the following</item>
+        <item>Have you done any of the following in the last 28-45 days</item>
+        <item>Have you avoided any of the below in public places</item>
+    </string-array>
+
+    <string-array name="optionAList">
+        <item>Fever or Muscle Pain</item>
+        <item>Diabetes</item>
+        <item>Visited Internationally</item>
+        <item>Wearing Masks</item>
+    </string-array>
+
+    <string-array name="optionBList">
+        <item>Dry Cough or lack of taste</item>
+        <item>Lung Disease</item>
+        <item>Met anyone who came from foreign country</item>
+        <item>Hand Sanitization</item>
+    </string-array>
+
+    <string-array name="optionCList">
+        <item>Shortness of Breath</item>
+        <item>Heart Disease</item>
+        <item>Met anyone who later on gets COVID positive</item>
+        <item>Social Distancing</item>
+    </string-array>
+
+    <string-array name="optionDList">
+        <item>None of the above</item>
+        <item>None of the above</item>
+        <item>None of the above</item>
+        <item>No</item>
+    </string-array>
+
+    <string name="next">Next</string>
+    <string name="finish">Finish</string>
+    <string name="self_assessment_test">Self Assessment Test</string>
+
     <string name="take_my_assessment">Take Assessment now</string>
     <string name="think_you_are_affected">Feeling any of the above symptoms?</string>
 
+    <string name="your_assessment_result">Your Assessment Result</string>
+    <string name="safe_result">Your infection risk is low.We recommend you to stay at home to avoid any chance of getting Novel Coronavirus.\n Retake self Assessment.If you develop any symptoms
+        or come in contact with any of the COVID-19 patient</string>
+    <string name="unsafe_result">According to your self assessment test, you may have been infected by Novel Coronavirus.
+                    So go to the hospital immediately following all the necessary measures and get it tested.\n
+                    Before your result come, keep yourself isolated and dont go outside.</string>
+    <string name="danger_result">According to your self assessment test, it is highly sure that you have been infected
+                    by Novel Coronavirus. So isolate yourself and go to nearby hosptal and get it tested.\n
+                    Till then Avoid contact and follow all the precautions and measures which you will be given by the hospital</string>
+
+    <string name="starting_self_assessment">Starting Self Assessment...</string>
     <string name="Disclaimer1">Please Give Correct Answers</string>
     <string name="Disclaimer2">Be a responsible citizen and provide accurate answers in this assessment test.
         This test will help you to know your current condition.</string>

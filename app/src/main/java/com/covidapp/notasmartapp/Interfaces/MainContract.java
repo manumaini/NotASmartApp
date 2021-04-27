@@ -3,7 +3,6 @@ package com.covidapp.notasmartapp.Interfaces;
 import android.location.Location;
 
 import com.covidapp.notasmartapp.Data.Models.DiseaseSample;
-import com.covidapp.notasmartapp.Data.Models.Hospital;
 import com.covidapp.notasmartapp.POJO.Article;
 import com.covidapp.notasmartapp.POJO.Result;
 import com.google.firebase.auth.FirebaseUser;
@@ -48,7 +47,7 @@ public interface MainContract {
     }
 
     interface HospitalView{
-        void onSuccess(ArrayList<Hospital> list);
+        void onSuccess(ArrayList<ArrayList<String>> values);
         void onFailed(String error);
         void showLoading();
         void hideLoading();

@@ -96,7 +96,7 @@ public class MapFragment extends Fragment implements MainContract.MapView {
                     } else {
                         Toast.makeText(getContext(), "cant get the current location", Toast.LENGTH_LONG).show();
                         Intent intent = new Intent(android.content.Intent.ACTION_VIEW, Uri.parse("http://maps.google.com/maps"));
-                        startActivity(intent);
+                        //startActivity(intent);
                         getContext().startActivity(intent);
                     }
 

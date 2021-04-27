@@ -4,7 +4,7 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="Health_News">Health News</string>
-    <string name="Covid_News">Covid News</string>
+    <string name="Covid_News">Covid Stats</string>
     <string name="Find_Hospitals">Find Hospitals</string>
     <string name="Settings">Settings</string>
     <string name="Search">Search</string>

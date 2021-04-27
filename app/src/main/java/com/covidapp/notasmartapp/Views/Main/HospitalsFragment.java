@@ -14,7 +14,6 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.covidapp.notasmartapp.Adapters.HospitalAdapter;
-import com.covidapp.notasmartapp.Data.Models.Hospital;
 import com.covidapp.notasmartapp.Interfaces.MainContract;
 import com.covidapp.notasmartapp.Presenters.HospitalPresenter;
 import com.covidapp.notasmartapp.R;
@@ -44,8 +43,9 @@ public class HospitalsFragment extends Fragment implements MainContract.Hospital
 
 
     @Override
-    public void onSuccess(ArrayList<Hospital> list) {
-        adapter.setData(list);
+    public void onSuccess(ArrayList<ArrayList<String>> values) {
+        //set data
+        adapter.setData(values);
         adapter.notifyDataSetChanged();
     }
 

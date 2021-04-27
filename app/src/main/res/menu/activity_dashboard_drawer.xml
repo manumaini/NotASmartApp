@@ -10,7 +10,7 @@
 
         <item
             android:id="@+id/menu_covidNews"
-            android:icon="@drawable/ic_virus_solid"
+            android:icon="@drawable/ic_stats"
             android:iconTint="@color/colorAccent"
             android:title="@string/Covid_News" />
 
@@ -29,7 +29,7 @@
         <item
             android:id="@+id/menu_covid_symptoms"
             android:iconTint="@color/colorAccent"
-            android:icon="@drawable/symptoms"
+            android:icon="@drawable/ic_virus_solid"
             android:title="@string/Covid_Symptoms" />
 
         <item

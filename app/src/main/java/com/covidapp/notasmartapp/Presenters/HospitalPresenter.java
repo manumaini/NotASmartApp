@@ -1,19 +1,16 @@
 package com.covidapp.notasmartapp.Presenters;
 
 import android.content.Context;
-import android.util.Log;
 
-import androidx.annotation.NonNull;
-
-import com.covidapp.notasmartapp.Data.Models.Hospital;
+import com.covidapp.notasmartapp.Clients.RetrofitClient;
 import com.covidapp.notasmartapp.Interfaces.MainContract;
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.QueryDocumentSnapshot;
-import com.google.firebase.firestore.QuerySnapshot;
+import com.covidapp.notasmartapp.POJO.Hospital;
 
 import java.util.ArrayList;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class HospitalPresenter implements MainContract.HospitalPresenter {
     private Context context;
@@ -30,25 +27,25 @@ public class HospitalPresenter implements MainContract.HospitalPresenter {
     @Override
     public void loadHospitals() {
         view.showLoading();
-        FirebaseFirestore firestore = FirebaseFirestore.getInstance();
-        firestore.collection("Hospitals").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+        RetrofitClient.getInstance().getApi().getHsopitals().enqueue(new Callback<Hospital>() {
             @Override
-            public void onComplete(@NonNull Task<QuerySnapshot> task) {
-                Log.d(TAG, "onComplete: "+task.getResult().size());
-                if (task.isSuccessful()) {
-                    for(QueryDocumentSnapshot document : task.getResult()){
-                        Hospital hospital = document.toObject(Hospital.class);
-                        Log.d(TAG, "onComplete: "+hospital.getName());
-                        list.add(hospital);
-                    }
+            public void onResponse(Call<Hospital> call, Response<Hospital> response) {
+                if(response.isSuccessful()){
+                    Hospital hospital = response.body();
+                    ArrayList<ArrayList<String>> values = hospital.getValues();
+                    view.onSuccess(values);
                     view.hideLoading();
-                    view.onSuccess(list);
-                } else {
-                    view.hideLoading();
-                    view.onFailed(task.getException().getLocalizedMessage());
+
                 }
             }
+
+            @Override
+            public void onFailure(Call<Hospital> call, Throwable t) {
+                view.onFailed(t.getLocalizedMessage());
+                view.hideLoading();
+            }
         });
+
 
     }
 }

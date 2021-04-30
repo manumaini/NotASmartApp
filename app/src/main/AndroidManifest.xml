@@ -22,7 +22,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Views.Main.AssessmentResult"></activity>
+        <activity android:name=".Views.Main.ContactUs"></activity>
+        <activity android:name=".Views.Main.AssessmentResult" />
         <activity android:name=".Views.Main.AssessmentTest" />
         <activity android:name=".Views.Main.self_assessment_message" />
         <activity android:name=".Views.VerificationActivity" />

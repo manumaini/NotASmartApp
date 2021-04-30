@@ -27,7 +27,7 @@ public class Settings extends Fragment implements View.OnClickListener {
 
     private Button languageChange;
     private Locale locale;
-    private Button signOut;
+    private Button signOut,contactUs;
 
 
     @Nullable
@@ -36,6 +36,7 @@ public class Settings extends Fragment implements View.OnClickListener {
         View view =inflater.inflate(R.layout.fragment_settings,container,false);
         languageChange=view.findViewById(R.id.languageChange);
         signOut = view.findViewById(R.id.Settings_logout);
+        contactUs=view.findViewById(R.id.contact_us);
 
 
         PushDownAnim.setPushDownAnimTo(signOut).setOnClickListener(this);
@@ -73,6 +74,13 @@ public class Settings extends Fragment implements View.OnClickListener {
                 dialog.setCancelable(false);
                 dialog.show();
             }});
+        contactUs.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent contactIntent = new Intent(getContext(),ContactUs.class);
+                startActivity(contactIntent);
+            }
+        });
         return view;
     }
 

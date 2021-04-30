@@ -18,6 +18,7 @@
     <string name="text_yes">होय</string>
     <string name="text_no">नाही</string>
     <string name="assessment_cancelled">स्वत: चे मूल्यांकन रद्द केले</string>
+    <string name="contact_us">आमच्याशी संपर्क साधा</string>
 
     <string-array name="choose_state">
         <item>महाराष्ट्र</item>

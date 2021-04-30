@@ -19,8 +19,54 @@
         android:textColor="@color/colorWhite"
         android:textStyle="bold"/>
 
+
     <Button
         android:layout_below="@id/languageChange"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:text="Privacy Policy"
+        android:id="@+id/privacy_policy"
+        android:drawableLeft="@drawable/privacy"
+        android:paddingLeft="90dp"
+        android:paddingRight="90dp"
+        android:background="@drawable/button_background"
+        android:layout_marginTop="16dp"
+        android:layout_marginHorizontal="16dp"
+        android:textColor="@color/colorWhite"
+        android:textStyle="bold"/>
+
+    <Button
+        android:layout_below="@id/privacy_policy"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:text="Terms Of Service"
+        android:id="@+id/terms_conditions"
+        android:drawableLeft="@drawable/termsofservice"
+        android:paddingLeft="90dp"
+        android:paddingRight="90dp"
+        android:background="@drawable/button_background"
+        android:layout_marginTop="16dp"
+        android:layout_marginHorizontal="16dp"
+        android:textColor="@color/colorWhite"
+        android:textStyle="bold"/>
+
+    <Button
+        android:layout_below="@id/terms_conditions"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:text="Contact Us"
+        android:id="@+id/contact_us"
+        android:drawableLeft="@drawable/contactus"
+        android:paddingLeft="90dp"
+        android:paddingRight="90dp"
+        android:background="@drawable/button_background"
+        android:layout_marginTop="16dp"
+        android:layout_marginHorizontal="16dp"
+        android:textColor="@color/colorWhite"
+        android:textStyle="bold"/>
+
+    <Button
+        android:layout_below="@id/contact_us"
         android:layout_width="match_parent"
         android:layout_height="45dp"
         android:text="Sign out"
@@ -33,11 +79,5 @@
         android:layout_marginHorizontal="16dp"
         android:textColor="@color/colorWhite"
         android:textStyle="bold"/>
-
-
-
-
-
-
 
 </RelativeLayout>

@@ -17,6 +17,7 @@
     <string name="text_yes">Yes</string>
     <string name="text_no">No</string>
     <string name="assessment_cancelled">Self Assessment Cancelled</string>
+    <string name="contact_us">Contact Us</string>
 
     <string-array name="choose_state">
         <item>Maharashtra</item>

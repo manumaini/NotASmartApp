@@ -18,6 +18,16 @@
     <string name="text_no">No</string>
     <string name="assessment_cancelled">Self Assessment Cancelled</string>
     <string name="contact_us">Contact Us</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="privacy_intro">While using GoCorona App, some of the information that is personal could be collected from the resources about you. We will surely protected in order to secure the app while safeguarding your privacy as per which the details that is the personal information of the user that has been collected will be security kept. During the registration process there are some terms and policies for the privacy that have to accepted by the user. The use of the app signifies that the user has accepted the terms and conditions of the app.</string>
+    <string name="info_collected_name">1.Information Collected And Manner of collection</string>
+    <string name="info_collected">a. While registering on the app some of the information that will be collected and security kept on the server is as follows name, phone number, age,profession etc.\n b. The App will ask for the access to your contacts in case user have to call ambulance for emergency purposes.\n
+                                   c. The App will use your current location as to provide you the location of the nearby hospitals.\n d. There is a need to complete a self assessment test on the app that will collect the location data as well as uploaded on the server along with the results of the self assessment that would judge whether a person is suffering from covid or not.\n</string>
+    <string name="rights_heading">2.Rights</string>
+    <string name="rights">a. As a registered user, you have the right to access your profile at any time to add, remove or modify any registration information that you have supplied.\n
+       b. You cannot manage the communications that you receive from us or how you receive them.\n</string>
+    <string name="data_security_heading">3. Data Security</string>
+    <string name="data_security">The App is equipped with standard security features to protect the confidentiality and security of your information. Personal information provided at the time of registration is encrypted before being uploaded to the cloud where it is stored in a secure encrypted server. Personal information that is stored in the Apps of other registered users that you come in contact with is securely encrypted and are incapable of being accessed by such user.</string>
 
     <string-array name="choose_state">
         <item>Maharashtra</item>

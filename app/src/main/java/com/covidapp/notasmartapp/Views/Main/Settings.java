@@ -18,6 +18,7 @@ import androidx.fragment.app.Fragment;
 
 import com.covidapp.notasmartapp.R;
 import com.covidapp.notasmartapp.Views.LoginActivity;
+import com.covidapp.notasmartapp.Views.PrivacyPolicy;
 import com.google.firebase.auth.FirebaseAuth;
 import com.thekhaeng.pushdownanim.PushDownAnim;
 
@@ -27,8 +28,9 @@ public class Settings extends Fragment implements View.OnClickListener {
 
     private Button languageChange;
     private Locale locale;
-    private Button signOut,contactUs;
+    private Button signOut,contactUs,privacyPolicy,termsOfService;
 
+    // Contact Us, Privacy Policy to be done multilingual
 
     @Nullable
     @Override
@@ -37,6 +39,8 @@ public class Settings extends Fragment implements View.OnClickListener {
         languageChange=view.findViewById(R.id.languageChange);
         signOut = view.findViewById(R.id.Settings_logout);
         contactUs=view.findViewById(R.id.contact_us);
+        privacyPolicy=view.findViewById(R.id.privacy_policy);
+        termsOfService=view.findViewById(R.id.terms_conditions);
 
 
         PushDownAnim.setPushDownAnimTo(signOut).setOnClickListener(this);
@@ -79,6 +83,13 @@ public class Settings extends Fragment implements View.OnClickListener {
             public void onClick(View v) {
                 Intent contactIntent = new Intent(getContext(),ContactUs.class);
                 startActivity(contactIntent);
+            }
+        });
+        privacyPolicy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent privacyIntent = new Intent(getContext(), PrivacyPolicy.class);
+                startActivity(privacyIntent);
             }
         });
         return view;

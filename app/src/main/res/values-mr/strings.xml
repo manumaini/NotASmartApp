@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">NotASmartApp</string>
+    <string name="app_name">Go Corona</string>
     <string name="sign_up">आपली बुद्धिमत्ता घेऊ नका ? <u>साइन अप करा</u></string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>

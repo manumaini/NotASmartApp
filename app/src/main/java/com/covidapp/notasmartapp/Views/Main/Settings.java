@@ -19,6 +19,7 @@ import androidx.fragment.app.Fragment;
 import com.covidapp.notasmartapp.R;
 import com.covidapp.notasmartapp.Views.LoginActivity;
 import com.covidapp.notasmartapp.Views.PrivacyPolicy;
+import com.covidapp.notasmartapp.Views.TermsOfUse;
 import com.google.firebase.auth.FirebaseAuth;
 import com.thekhaeng.pushdownanim.PushDownAnim;
 
@@ -90,6 +91,13 @@ public class Settings extends Fragment implements View.OnClickListener {
             public void onClick(View v) {
                 Intent privacyIntent = new Intent(getContext(), PrivacyPolicy.class);
                 startActivity(privacyIntent);
+            }
+        });
+        termsOfService.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent termsIntent = new Intent(getContext(), TermsOfUse.class);
+                startActivity(termsIntent);
             }
         });
         return view;

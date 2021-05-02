@@ -22,7 +22,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Views.PrivacyPolicy"></activity>
+        <activity android:name=".Views.TermsOfUse"></activity>
+        <activity android:name=".Views.PrivacyPolicy" />
         <activity android:name=".Views.Main.ContactUs" />
         <activity android:name=".Views.Main.AssessmentResult" />
         <activity android:name=".Views.Main.AssessmentTest" />

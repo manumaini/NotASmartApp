@@ -29,6 +29,25 @@
     <string name="data_security_heading">3. Data Security</string>
     <string name="data_security">The App is equipped with standard security features to protect the confidentiality and security of your information. Personal information provided at the time of registration is encrypted before being uploaded to the cloud where it is stored in a secure encrypted server. Personal information that is stored in the Apps of other registered users that you come in contact with is securely encrypted and are incapable of being accessed by such user.</string>
 
+    <string name="terms_service">Terms of Service</string>
+    <string name="terms_intro">These terms of service (Terms) govern your use of the Go Corona application for Android App and the services provided thereunder. Please read these terms and conditions carefully before you use the App. In order to continue using the App,
+        you will be required to accept the revised Terms.</string>
+    <string name="service_overview_heading">1. SERVICE OVERVIEW</string>
+    <string name="service_overview">The App is part of a service designed to (i) enable registered users provide useful information in relation to COVID-19,\n
+        (ii) to allow users to access convenience information and statistics in relation to COVID-19, \n
+        (iii)to help people locate all the nearby hospitals within their range\n (iv) to display beds available in hospitals. When the App is installed on your Android device, it requires access to users contacts and location as mentioned in the Privacy Policy.intervention. \n
+        (v) The App also allows users to conduct a self-assessment test to assess whether their symptoms combined with other relevant factors affects their risk of being infected.\n</string>
+    <string name="privacy_heading">2. PRIVACY</string>
+    <string name="privacy">You hereby consent to the collection and use of your personal information for the provision of the Services. The details of the personal information collected and the manner in which it is collected and by whom as
+        well as the purposes for which it will be used is more fully set out in our privacy policy which is available here.</string>
+    <string name="disruption_heading">3.DISRUPTION</string>
+    <string name="disruption">You agree that you have no expectation of, or right to permanent and uninterrupted access to the Services. While the Services are intended to be accessible to you from everywhere in India on a 24x7 basis, from time to time and without prior notice of downtime, access to the App or the Services or to any part thereof may be suspended on either
+        a temporary or permanent basis and either with respect to all or a certain class of users.</string>
+    <string name="defect_heading">4. DEFECT REPORTING</string>
+    <string name="defect">You can report any defects or bugs in the App or the Services to <b>gocorona2021saviour@gmail.com.</b> Our team will make every endeavour to address all
+        reported bugs and defects.</string>
+
+
     <string-array name="choose_state">
         <item>Maharashtra</item>
         <item>Tamil Nadu</item>

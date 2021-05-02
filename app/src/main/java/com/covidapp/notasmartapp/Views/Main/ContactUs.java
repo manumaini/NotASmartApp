@@ -6,11 +6,13 @@ import androidx.appcompat.widget.Toolbar;
 
 import android.app.ActionBar;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 
 import com.covidapp.notasmartapp.R;
 import com.google.firebase.auth.FirebaseAuth;
@@ -21,7 +23,7 @@ public class ContactUs extends AppCompatActivity {
     private Button submit;
     private String usersQuery="";
     private Toolbar toolbar;
-    private FirebaseAuth mAuth;
+    private ImageButton gmail,facebook,twitter,instagram;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,27 +34,42 @@ public class ContactUs extends AppCompatActivity {
         userEmail=findViewById(R.id.user_email);
         userQuery=findViewById(R.id.user_query);
         submit=findViewById(R.id.submit_contact);
+        gmail=findViewById(R.id.gmail_button);
+        twitter=findViewById(R.id.twitter_button);
+        facebook=findViewById(R.id.facebook_button);
+        instagram=findViewById(R.id.instagram_button);
         toolbar.setTitle(R.string.contact_us);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
-//        submit.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                if(userName.getText().toString().isEmpty()){
-//                    userName.setError("Requiered field");
-//                }
-//                else if(userEmail.getText().toString().isEmpty()){
-//                    userEmail.setError("Required field");
-//                }
-//                else if(userQuery.getText().toString().isEmpty()){
-//                    userQuery.setError("Required field");
-//                }
-//                else {
-//                    mAuth.getCurrentUser();
-//                }
-//            }
-//        });
+        instagram.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Uri insta = Uri.parse("https://www.instagram.com/invites/contact/?i=dqpek6qk5h8u&utm_content=lyjsc54");
+                Intent instaIntent = new Intent(Intent.ACTION_VIEW,insta);
+                startActivity(instaIntent);
+            }
+        });
+        twitter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Uri tweet = Uri.parse("https://twitter.com/AppCorona?s=08");
+                Intent twitterIntent = new Intent(Intent.ACTION_VIEW,tweet);
+                startActivity(twitterIntent);
+            }
+        });
+        gmail.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent gmailIntent=new Intent(Intent.ACTION_SEND);
+                gmailIntent.setType("plain/text");
+                gmailIntent.putExtra(Intent.EXTRA_EMAIL,new String[]{"gocorona2021saviour@gmail.com"});
+                gmailIntent.setPackage("com.google.android.gm");
+                if(gmailIntent.resolveActivity(getPackageManager())!=null){
+                    startActivity(gmailIntent);
+                }
+            }
+        });
     }
 
     @Override

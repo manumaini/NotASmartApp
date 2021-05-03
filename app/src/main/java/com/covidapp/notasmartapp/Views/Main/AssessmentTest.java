@@ -25,7 +25,7 @@ public class AssessmentTest extends AppCompatActivity {
     private String[] optionsBList;
     private String[] optionsCList;
     private String[] optionsDList;
-    private int score=0,i=0;
+    private int score=0,i=0,major=0,minor=0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -95,6 +95,10 @@ public class AssessmentTest extends AppCompatActivity {
                           startActivity(intent);
                         }
                         else {
+                            if(major==1)
+                                 score+=5;
+                            else
+                                score+=0;
                             i++;
                             setQuestionAndAnswers();
                         }
@@ -116,11 +120,13 @@ public class AssessmentTest extends AppCompatActivity {
     }
 
     void handleMajorOptions(){
-         score = score+5;
+         major=1;
+         minor=0;
          nextButton.setVisibility(View.VISIBLE);
     }
     void handleMinorOption(){
-        score+=0;
+        major=0;
+        minor=1;
         nextButton.setVisibility(View.VISIBLE);
     }
     void restoreColor(){

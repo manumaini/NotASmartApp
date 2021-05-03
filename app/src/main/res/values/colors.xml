@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#00C569</color>
-    <color name="colorPrimaryDark">#00C569</color>
-    <color name="colorAccent">#00C569</color>
+<!--    previous #00C569-->
+    <color name="colorPrimary">#06BED6</color>
+<!--    #00C569-->
+    <color name="colorPrimaryDark">#1B9EAF</color>
+<!--    #00C569-->
+    <color name="colorAccent">#02BCD5</color>
 
     <color name="colorWhite">#FFFFFF</color>
     <color name="colorLightGrey">#EEEEEE</color>

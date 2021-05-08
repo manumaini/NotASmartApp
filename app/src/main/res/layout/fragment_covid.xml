@@ -118,7 +118,7 @@
                         android:layout_height="wrap_content"/>
 
                     <ImageView
-                        app:tint="#FCCB44"
+                        app:tint="#F18A06"
                         android:layout_marginTop="16dp"
                         android:layout_below="@id/ActiveCasesLabel"
                         android:src="@drawable/ic_hospital"
@@ -128,12 +128,11 @@
                     <TextView
                         android:id="@+id/activeCases"
                         android:layout_marginTop="8dp"
-                        android:textColor="#FCCB44"
+                        android:textColor="#F18A06"
                         android:textStyle="bold"
                         android:textSize="28sp"
                         android:layout_alignParentEnd="true"
                         android:layout_below="@id/ActiveCasesLabel"
-                        android:text="1546545446"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
 

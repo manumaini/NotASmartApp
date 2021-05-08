@@ -65,6 +65,15 @@ public class ContactUs extends AppCompatActivity {
             }
         });
 
+        facebook.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Uri faceBook = Uri.parse("https://www.facebook.com/gocorona2021.5895/");
+                Intent facebookIntent = new Intent(Intent.ACTION_VIEW,faceBook);
+                startActivity(facebookIntent);
+            }
+        });
+
         instagram.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

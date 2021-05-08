@@ -132,10 +132,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 navigationView.setCheckedItem(R.id.menu_hospitals);
                 toolbar.setTitle(R.string.Hospital);
                 break;
-
-
-
-
         }
         drawer.closeDrawer(GravityCompat.START);
         return true;

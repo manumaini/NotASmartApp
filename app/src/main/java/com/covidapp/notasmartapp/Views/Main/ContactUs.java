@@ -13,9 +13,14 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
+import com.covidapp.notasmartapp.POJO.Contact;
 import com.covidapp.notasmartapp.R;
-import com.google.firebase.auth.FirebaseAuth;
+//import com.google.firebase.auth.FirebaseAuth;
+//import com.google.firebase.database.DatabaseReference;
+//import com.google.firebase.database.FirebaseDatabase;
+//import com.google.firebase.firestore.auth.User;
 
 public class ContactUs extends AppCompatActivity {
 
@@ -24,6 +29,9 @@ public class ContactUs extends AppCompatActivity {
     private String usersQuery="";
     private Toolbar toolbar;
     private ImageButton gmail,facebook,twitter,instagram;
+//    FirebaseDatabase database;
+//    DatabaseReference mDatabaseReference;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +50,21 @@ public class ContactUs extends AppCompatActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
+
+//        submit.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                database=FirebaseDatabase.getInstance();
+//                mDatabaseReference=database.getReference();
+//                Contact contact = new Contact(userName.getText().toString(),userEmail.getText().toString(),userQuery.getText().toString());
+//                mDatabaseReference.child("contact").setValue(contact);
+//                userName.setText("");
+//                userEmail.setText("");
+//                userQuery.setText("");
+//                Toast.makeText(getApplicationContext(),"Your Query is sent successfully",Toast.LENGTH_SHORT).show();
+//            }
+//        });
+
         instagram.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -50,6 +73,7 @@ public class ContactUs extends AppCompatActivity {
                 startActivity(instaIntent);
             }
         });
+
         twitter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -58,6 +82,7 @@ public class ContactUs extends AppCompatActivity {
                 startActivity(twitterIntent);
             }
         });
+
         gmail.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
